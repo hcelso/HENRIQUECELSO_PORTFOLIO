@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#000; }
+  body { font-family: Archivo, "Helvetica Neue", Helvetica, sans-serif; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:#ff9f1c; text-decoration:none; }
+  a:hover { color:#fff; }
+  ::selection { background:#ff9f1c; color:#000; }
+  html { scroll-behavior:smooth; }
+</style>
+</helmet>
+<div style="background:#000; color:#fff; position:relative; overflow:hidden">
+
+  <header style="position:fixed; top:0; left:0; right:0; z-index:60; display:flex; align-items:center; justify-content:space-between; padding:clamp(16px,2vw,26px) clamp(18px,3.2vw,46px); gap:16px; backdrop-filter:blur(18px); background:rgba(0,0,0,.55); border-bottom:1px solid rgba(255,255,255,.07)">
+    <nav style="display:flex; gap:clamp(16px,2.6vw,38px); align-items:center; flex-wrap:wrap">
+      <a href="Portfolio.dc.html#home" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">home</a>
+      <a href="Portfolio.dc.html#work" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">my work</a>
+      <a href="Portfolio.dc.html#about" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">about</a>
+      <a href="Portfolio.dc.html#contact" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">contact</a>
+    </nav>
+    <div style="display:flex; gap:22px; align-items:center">
+      <a href="https://instagram.com" target="_blank" rel="noreferrer" style="display:grid; place-items:center; width:17px; height:9px; opacity:.8; transition:opacity .3s ease" style-hover="opacity:1">
+        <img src="assets/icone_instagram.png" alt="Instagram" style="width:100%; height:100%; object-fit:contain; display:block">
+      </a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="position:relative; height:100vh; min-height:620px; overflow:hidden">
+    <img data-heroparallax="1" src="assets/fendaara/13-hand.jpg" alt="Fendaara opening" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:translate3d(0,0,0) scale(1.1); will-change:transform">
+    <div style="position:absolute; inset:0; background:radial-gradient(ellipse 70% 55% at 50% 48%, rgba(0,0,0,.78) 0%, rgba(0,0,0,.58) 55%, rgba(0,0,0,.3) 80%, transparent 100%), linear-gradient(to bottom, rgba(0,0,0,.72) 0%, rgba(0,0,0,.4) 32%, rgba(0,0,0,.6) 70%, #000 100%)"></div>
+
+    <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 clamp(18px,5vw,90px); gap:clamp(14px,1.6vw,22px)">
+      <span style="font-size:clamp(9px,.78vw,12px); font-weight:400; letter-spacing:.24em; color:rgba(255,255,255,.78)">Created for Greydot Lab · 2025</span>
+      <h1 style="margin:0; font-size:clamp(40px,7.4vw,132px); font-weight:600; letter-spacing:-.05em; line-height:.94; color:#fff">Fendaara</h1>
+      <p style="margin:0; font-size:clamp(16px,2.1vw,38px); font-weight:300; letter-spacing:-.02em; color:rgba(255,255,255,.88)">Webseries Opening</p>
+      <p style="margin:clamp(10px,1.4vw,20px) 0 0; max-width:50ch; font-size:clamp(13px,1vw,16px); font-weight:400; line-height:1.7; color:rgba(255,255,255,.72); text-wrap:pretty">A loading screen for a clandestine, improvised radio broadcast — illustrated, vectorized and animated into a piece built entirely out of noise.</p>
+    </div>
+
+    <div style="position:absolute; left:0; right:0; bottom:clamp(24px,3.2vw,46px); display:flex; justify-content:center; align-items:center; gap:clamp(18px,3vw,44px); flex-wrap:wrap">
+      <a href="#opening" style="font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.7); white-space:nowrap" style-hover="color:#fff">watch the opening</a>
+    </div>
+  </section>
+
+  <nav data-chapters="1" style="position:sticky; top:clamp(48px,5.4vw,66px); z-index:40; display:flex; justify-content:center; gap:clamp(12px,2vw,30px); flex-wrap:wrap; padding:16px clamp(18px,5vw,90px); background:rgba(0,0,0,.6); backdrop-filter:blur(18px); border-bottom:1px solid rgba(255,255,255,.07)">
+    <a href="#concept" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">concept</a>
+    <a href="#illustration" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">illustration</a>
+    <a href="#motion" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">motion</a>
+    <a href="#glitch" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">glitch</a>
+    <a href="#handdrawn" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">frame by frame</a>
+  </nav>
+
+  <section data-screen-label="Discipline" style="padding:clamp(90px,14vw,220px) clamp(18px,5vw,90px)">
+    <div data-reveal="1" style="display:flex; justify-content:center; gap:clamp(28px,4.4vw,72px); flex-wrap:wrap; font-size:clamp(11px,.95vw,15px); font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.72)">
+      <span>Illustration</span>
+      <span>Graphic Design</span>
+      <span>Motion Design</span>
+    </div>
+    <p data-reveal="1" style="margin:clamp(56px,9vw,140px) auto 0; max-width:22ch; text-align:center; font-size:clamp(28px,4.6vw,76px); font-weight:500; letter-spacing:-.045em; line-height:1.08; color:#fff; text-wrap:balance">A broken signal, designed on purpose.</p>
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(46px,7vw,110px) auto 0">
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">Fendaara is an Instagram web series created at Greydot Lab in 2025. The brief for the opening was specific: a loading screen for a clandestine, improvised radio transmission.</p>
+        <p style="margin:0">That premise pointed the whole piece toward noise. Halftone patterns, glitches and chromatic aberration were not applied as a finishing effect — they became the material the opening is made of.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">The universe of the series has a strong identity of its own, mixing futurism with elements from the original peoples of the planet where the story takes place.</p>
+        <p style="margin:0">I worked across the full sequence: concept and illustration, vectorization of the artwork, animation of every element on screen, and the glitch treatment that gives the piece its texture.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="opening" data-screen-label="The opening" style="padding:clamp(70px,11vw,160px) clamp(18px,5vw,90px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:clamp(18px,3vw,48px); flex-wrap:wrap; width:min(100%,1700px); margin:0 auto">
+      <h2 data-reveal="1" style="margin:0; font-size:clamp(46px,10vw,190px); font-weight:600; letter-spacing:-.055em; line-height:.9; color:#fff">The opening</h2>
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">2025 — greydot lab</span>
+    </div>
+    <div style="width:min(100%,1700px); margin:clamp(36px,5vw,72px) auto 0">
+      <div style="position:relative; width:100%; aspect-ratio:16/9; background:#050505; border-radius:4px; overflow:hidden">
+        <video data-sync="1" muted="" loop="" src="assets/fendaara/opening.mp4" playsinline="" preload="auto" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; background:#050505"></video>
+      </div>
+      <p style="margin:16px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">fendaara — opening sequence</p>
+    </div>
+  </section>
+
+  <section id="concept" data-screen-label="Concept moodboard" style="padding:clamp(70px,11vw,170px) 0">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">visual research</span>
+      <h3 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:20ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Futurism built on ancestral form.</h3>
+      <p data-reveal="1" style="margin:clamp(24px,3vw,44px) auto 0; max-width:62ch; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">The first moodboard set the visual territory: geometry, ornament and pattern from the original peoples of the planet, read through a technological lens. It defined the palette, the line language and the level of detail the screen would carry.</p>
+    </div>
+    <div data-reveal="1" style="width:min(100%,1700px); margin:clamp(46px,7vw,110px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <img src="assets/fendaara/moodboard-concept.png" alt="Concept moodboard" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <p style="margin:14px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">concept moodboard — visual references</p>
+    </div>
+  </section>
+
+  <section id="illustration" data-screen-label="Illustration" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">from sketch to vector</span>
+      <h3 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:20ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Drawing the screen before animating it.</h3>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(18px,2.4vw,40px); width:min(100%,1500px); margin:clamp(46px,7vw,110px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <div>
+        <img src="assets/fendaara/01-concept.jpg" alt="Concept illustration" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+        <p style="margin:14px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">concept — original illustration</p>
+      </div>
+      <div>
+        <img src="assets/fendaara/02-vector.jpg" alt="Vectorized artwork" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+        <p style="margin:14px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">vectorized artwork — final layout</p>
+      </div>
+    </div>
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(56px,9vw,140px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">The concept illustration established the composition and the ornamental system around the central loading state.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">Vectorizing it was what made the animation possible: every circuit line, marker and counter became an independent element, ready to move on its own.</p>
+        <p style="margin:0">The design was built to hold noise. Precise, symmetrical and graphic enough that the distortion applied later would read as interference rather than as a mistake.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="motion" data-screen-label="Motion references" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">animation references</span>
+      <h3 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:22ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Glitch as a language, not an accident.</h3>
+      <p data-reveal="1" style="margin:clamp(24px,3vw,44px) auto 0; max-width:62ch; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">With the artwork finished, a second moodboard was assembled for the animation. The main reference was the glitch treatment in <em>Spider-Man: Into the Spider-Verse</em> and other productions directed by Alberto Mielgo.</p>
+    </div>
+    <div data-reveal="1" style="width:min(100%,1700px); margin:clamp(46px,7vw,110px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <img src="assets/fendaara/moodboard-motion.png" alt="Motion moodboard" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <p style="margin:14px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">motion moodboard — glitch references</p>
+    </div>
+
+    <div style="text-align:center; padding:clamp(70px,11vw,150px) clamp(18px,5vw,90px) 0">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">phase 01</span>
+      <h3 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:20ch; font-size:clamp(28px,4.4vw,72px); font-weight:500; letter-spacing:-.05em; line-height:1.06; color:#fff; text-wrap:balance">Every element on screen given life.</h3>
+      <p data-reveal="1" style="margin:clamp(24px,3vw,44px) auto 0; max-width:60ch; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">The first pass animated the artwork straight: circuits pulsing, counters running, the central loading state breathing. Clean, before any interference.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(18px,2.4vw,40px); width:min(100%,1500px); margin:clamp(40px,6vw,90px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <img src="assets/fendaara/03-phase1-a.jpg" alt="First animation pass" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/fendaara/04-phase1-b.jpg" alt="First animation pass" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+    </div>
+    <p style="margin:14px auto 0; width:min(100%,1500px); padding:0 clamp(18px,5vw,90px); font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">phase 01 — element animation</p>
+  </section>
+
+  <section id="glitch" data-screen-label="Glitch pass" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">phase 02</span>
+      <h3 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:22ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Halftones, chromatic aberration, interference.</h3>
+      <p data-reveal="1" style="margin:clamp(24px,3vw,44px) auto 0; max-width:60ch; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">The second phase built the glitch treatment in After Effects — channel separation, halftone breakup and signal drop-outs timed against the animation underneath.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(14px,1.8vw,28px); width:min(100%,1700px); margin:clamp(46px,7vw,110px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <img src="assets/fendaara/05-glitch-01.jpg" alt="Glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/fendaara/06-glitch-02.jpg" alt="Glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/fendaara/07-glitch-03.jpg" alt="Glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/fendaara/08-glitch-04.jpg" alt="Glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/fendaara/09-glitch-05.jpg" alt="Glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+    </div>
+    <p style="margin:14px auto 0; width:min(100%,1700px); padding:0 clamp(18px,5vw,90px); font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">phase 02 — glitch and chromatic aberration</p>
+  </section>
+
+  <section id="handdrawn" data-screen-label="Frame by frame" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">phase 03</span>
+      <h3 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:20ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Drawn by hand, one frame at a time.</h3>
+      <p data-reveal="1" style="margin:clamp(24px,3vw,44px) auto 0; max-width:62ch; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">The last phase added illustrated elements animated frame by frame over the composition. They reinforce the digital glitches with something irregular and hand-made, and give the piece the personality the software effects alone could not reach.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(12px,1.5vw,24px); width:min(100%,1700px); margin:clamp(46px,7vw,110px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <img src="assets/fendaara/10-hand.jpg" alt="Hand-drawn glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/fendaara/11-hand.jpg" alt="Hand-drawn glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/fendaara/12-hand.jpg" alt="Hand-drawn glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/fendaara/13-hand.jpg" alt="Hand-drawn glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/fendaara/14-hand.jpg" alt="Hand-drawn glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/fendaara/15-hand.jpg" alt="Hand-drawn glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/fendaara/16-hand.jpg" alt="Hand-drawn glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/fendaara/17-hand.jpg" alt="Hand-drawn glitch frame" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+    </div>
+    <p style="margin:14px auto 0; width:min(100%,1700px); padding:0 clamp(18px,5vw,90px); font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">phase 03 — frame by frame illustration</p>
+  </section>
+
+  <section data-screen-label="Final piece" style="padding:clamp(70px,11vw,170px) clamp(18px,5vw,90px); border-top:1px solid rgba(255,255,255,.08)">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(34px,6vw,100px); align-items:center; width:min(100%,1280px); margin:0 auto">
+      <div>
+        <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">final piece</span>
+        <h3 data-reveal="1" style="margin:clamp(16px,2vw,28px) 0 0; max-width:16ch; font-size:clamp(30px,4.4vw,72px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Delivered vertical, for the feed.</h3>
+        <p data-reveal="1" style="margin:clamp(22px,3vw,40px) 0 0; max-width:46ch; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">The series lives on Instagram, so the opening was delivered in vertical format — the version that actually plays before each episode.</p>
+      </div>
+      <div data-reveal="1" style="justify-self:center; width:min(100%,420px)">
+        <div style="position:relative; width:100%; aspect-ratio:9/16; background:#050505; border-radius:4px; overflow:hidden">
+          <video data-sync="1" muted="" loop="" src="assets/fendaara/opening-vertical.mp4" playsinline="" preload="auto" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; background:#050505"></video>
+        </div>
+        <p style="margin:14px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">vertical cut — instagram</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Closing" style="padding:clamp(90px,14vw,220px) clamp(18px,5vw,90px); border-top:1px solid rgba(255,255,255,.08); text-align:center">
+    <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">one creative practice</span>
+    <p data-reveal="1" style="margin:clamp(18px,2.4vw,34px) auto 0; max-width:24ch; font-size:clamp(26px,4.2vw,68px); font-weight:500; letter-spacing:-.045em; line-height:1.1; color:#fff; text-wrap:balance">Concept, illustration and motion in a single piece.</p>
+    <p data-reveal="1" style="margin:clamp(28px,4vw,56px) auto 0; max-width:66ch; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.6); text-wrap:pretty">On <em>Fendaara</em>, the same hands took the opening from reference gathering to illustration, vectorization, animation, compositing and final delivery. Working across disciplines is what allowed the noise to be designed rather than added: the drawing was built for the glitch, and the glitch was drawn back into the piece.</p>
+  </section>
+
+  <section data-screen-label="Contact CTA" style="padding:0 clamp(18px,5vw,90px) clamp(70px,11vw,160px); text-align:center">
+    <h2 style="margin:0; font-size:clamp(38px,7.4vw,130px); font-weight:600; letter-spacing:-.05em; line-height:1; color:#fff">lets talk!</h2>
+    <div style="display:flex; justify-content:center; gap:clamp(12px,1.6vw,20px); flex-wrap:wrap; margin-top:clamp(28px,4vw,52px)">
+      <a href="Portfolio.dc.html#contact" style="padding:15px 34px; border-radius:100px; background:#ff9f1c; color:#000; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; transition:opacity .3s; white-space:nowrap" style-hover="opacity:.82; color:#000">get in touch</a>
+      <a href="Portfolio.dc.html#work" style="padding:15px 34px; border-radius:100px; border:1px solid rgba(255,255,255,.28); color:rgba(255,255,255,.85); font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; transition:border-color .3s, color .3s; white-space:nowrap" style-hover="border-color:#fff; color:#fff">back to work</a>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;autoplayVideos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Media&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const hv = document.querySelector('video[data-heroparallax]');
+    if (hv) {
+      hv.muted = true; hv.loop = true; hv.playsInline = true; hv.disablePictureInPicture = true;
+      const hp = hv.play(); if (hp && hp.catch) hp.catch(() => {});
+    }
+
+    if ((this.props.scrollReveal ?? true) && !reduce) {
+      const items = Array.from(document.querySelectorAll('[data-reveal]'))
+        .filter(el => !el.querySelector('img, video, iframe'));
+      items.forEach(el => {
+        el.style.transition = 'opacity .9s cubic-bezier(.22,.61,.36,1), transform 1s cubic-bezier(.22,.61,.36,1)';
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+      });
+      const show = el => {
+        if (el.dataset.revealed) return;
+        el.dataset.revealed = '1';
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+        const done = () => { el.style.transition = ''; el.removeEventListener('transitionend', done); };
+        el.addEventListener('transitionend', done);
+      };
+      const heal = () => items.forEach(el => {
+        if (!el.dataset.revealed && el.getBoundingClientRect().top < window.innerHeight * 0.94) show(el);
+      });
+      this._heal = heal;
+      if ('IntersectionObserver' in window) {
+        this._io = new IntersectionObserver(en => {
+          en.forEach(e => { if (e.isIntersecting) { show(e.target); this._io.unobserve(e.target); } });
+        }, { rootMargin: '200px 0px -8% 0px' });
+        items.forEach(el => this._io.observe(el));
+        heal();
+        setTimeout(heal, 400);
+      } else items.forEach(show);
+    }
+
+    const vids = Array.from(document.querySelectorAll('[data-lazyvid]'));
+    const autoplay = (this.props.autoplayVideos ?? true) && !reduce;
+    vids.forEach(v => { v.muted = true; v.loop = true; v.playsInline = true; v.disablePictureInPicture = true; });
+    if ('IntersectionObserver' in window) {
+      this._pio = new IntersectionObserver(en => {
+        en.forEach(e => {
+          if (!e.isIntersecting) return;
+          if (e.target.preload !== 'auto') e.target.preload = 'auto';
+          this._pio.unobserve(e.target);
+        });
+      }, { rootMargin: '120% 0px' });
+      vids.forEach(v => this._pio.observe(v));
+
+      const syncEls = Array.from(document.querySelectorAll('[data-sync]'));
+      syncEls.forEach(v => { v.muted = true; v.loop = true; v.playsInline = true; v.disablePictureInPicture = true; v.preload = 'auto'; if (v.readyState === 0) v.load(); });
+
+      this._vio = new IntersectionObserver(en => {
+        en.forEach(e => {
+          const v = e.target;
+          if (e.isIntersecting && autoplay) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+          else if (!v.paused) v.pause();
+        });
+      }, { threshold: 0.15 });
+      vids.forEach(v => this._vio.observe(v));
+      syncEls.forEach(v => this._vio.observe(v));
+    }
+    this._vis = () => { if (document.hidden) vids.forEach(v => v.pause()); };
+    document.addEventListener('visibilitychange', this._vis);
+
+    const hero = document.querySelector('[data-heroparallax]');
+    const chips = Array.from(document.querySelectorAll('[data-chip]'));
+    const targets = chips.map(a => document.querySelector(a.getAttribute('href')));
+    let raf = 0;
+    const frame = () => {
+      raf = 0;
+      if (hero && !reduce) {
+        const r = hero.parentElement.getBoundingClientRect();
+        if (r.bottom > -200 && r.top < window.innerHeight + 200) {
+          const p = Math.max(-1, Math.min(1, (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight));
+          hero.style.transform = 'translate3d(0,' + (-p * r.height * 0.07).toFixed(2) + 'px,0) scale(1.1)';
+        }
+      }
+      if (this._heal) this._heal();
+      let active = -1;
+      targets.forEach((el, i) => { if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.4) active = i; });
+      chips.forEach((a, i) => { a.style.color = i === active ? '#fff' : 'rgba(255,255,255,.55)'; });
+    };
+    this._scroll = () => { if (!raf) raf = requestAnimationFrame(frame); };
+    window.addEventListener('scroll', this._scroll, { passive: true });
+    window.addEventListener('resize', this._scroll, { passive: true });
+    frame();
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._vio) this._vio.disconnect();
+    if (this._pio) this._pio.disconnect();
+    if (this._syncTimer) clearInterval(this._syncTimer);
+    document.removeEventListener('visibilitychange', this._vis);
+    window.removeEventListener('scroll', this._scroll);
+    window.removeEventListener('resize', this._scroll);
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

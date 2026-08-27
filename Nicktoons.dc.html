@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#000; }
+  body { font-family: Archivo, "Helvetica Neue", Helvetica, sans-serif; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:#ff9f1c; text-decoration:none; }
+  a:hover { color:#fff; }
+  ::selection { background:#ff9f1c; color:#000; }
+  html { scroll-behavior:smooth; }
+</style>
+</helmet>
+<div style="background:#000; color:#fff; position:relative; overflow:hidden">
+
+  <header style="position:fixed; top:0; left:0; right:0; z-index:60; display:flex; align-items:center; justify-content:space-between; padding:clamp(16px,2vw,26px) clamp(18px,3.2vw,46px); gap:16px; backdrop-filter:blur(18px); background:rgba(0,0,0,.55); border-bottom:1px solid rgba(255,255,255,.07)">
+    <nav style="display:flex; gap:clamp(16px,2.6vw,38px); align-items:center; flex-wrap:wrap">
+      <a href="Portfolio.dc.html#home" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">home</a>
+      <a href="Portfolio.dc.html#work" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">my work</a>
+      <a href="Portfolio.dc.html#about" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">about</a>
+      <a href="Portfolio.dc.html#contact" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">contact</a>
+    </nav>
+    <div style="display:flex; gap:22px; align-items:center">
+      <a href="https://instagram.com" target="_blank" rel="noreferrer" style="display:grid; place-items:center; width:17px; height:9px; opacity:.8; transition:opacity .3s ease" style-hover="opacity:1">
+        <img src="assets/icone_instagram.png" alt="Instagram" style="width:100%; height:100%; object-fit:contain; display:block">
+      </a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="position:relative; height:100vh; min-height:620px; overflow:hidden">
+    <img data-heroparallax="1" src="assets/work-nicktoons.jpg" alt="Nicktoons &amp; The Dice of Destiny" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:translate3d(0,0,0) scale(1.1); will-change:transform">
+    <div style="position:absolute; inset:0; background:radial-gradient(ellipse 70% 55% at 50% 48%, rgba(0,0,0,.72) 0%, rgba(0,0,0,.5) 55%, rgba(0,0,0,.25) 80%, transparent 100%), linear-gradient(to bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,.35) 32%, rgba(0,0,0,.55) 70%, #000 100%)"></div>
+
+    <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 clamp(18px,5vw,90px); gap:clamp(14px,1.6vw,22px)">
+      <span style="font-size:clamp(9px,.78vw,12px); font-weight:400; letter-spacing:.24em; color:rgba(255,255,255,.78)">Created for Greydot Lab · 2025</span>
+      <h1 style="margin:0; font-size:clamp(40px,7.4vw,132px); font-weight:600; letter-spacing:-.05em; line-height:.94; color:#fff">Nicktoons</h1>
+      <p style="margin:0; font-size:clamp(16px,2.1vw,38px); font-weight:300; letter-spacing:-.02em; color:rgba(255,255,255,.88)">&amp; The Dice of Destiny</p>
+      <p style="margin:clamp(10px,1.4vw,20px) 0 0; max-width:46ch; font-size:clamp(13px,1vw,16px); font-weight:400; line-height:1.7; color:rgba(255,255,255,.72); text-wrap:pretty">UI design and interface illustration across menus, character selection, inventory, map, progression systems and gameplay indicators.</p>
+    </div>
+
+    <div style="position:absolute; left:0; right:0; bottom:clamp(24px,3.2vw,46px); display:flex; justify-content:center; align-items:center; gap:clamp(20px,3.4vw,50px)">
+      <img src="assets/nick/logo-steam.png" alt="Steam" style="height:clamp(15px,1.5vw,23px); width:auto; opacity:.8; display:block">
+      <span style="display:block; width:1px; height:15px; background:rgba(255,255,255,.22)"></span>
+      <span style="display:flex; align-items:baseline; gap:9px; white-space:nowrap">
+        <span style="font-size:clamp(9px,.8vw,12px); font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.7)">metacritic</span>
+        <span style="font-size:clamp(14px,1.3vw,20px); font-weight:700; letter-spacing:-.02em; color:#ff9f1c">76</span>
+      </span>
+    </div>
+  </section>
+
+  <nav data-chapters="1" style="position:sticky; top:clamp(48px,5.4vw,66px); z-index:40; display:flex; justify-content:center; gap:clamp(12px,2vw,30px); flex-wrap:wrap; padding:16px clamp(18px,5vw,90px); background:rgba(0,0,0,.6); backdrop-filter:blur(18px); border-bottom:1px solid rgba(255,255,255,.07)">
+    <a href="#language" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">visual language</a>
+    <a href="#menus" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">menus</a>
+    <a href="#characters" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">characters</a>
+    <a href="#inventory" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">inventory</a>
+    <a href="#upgrades" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">upgrades</a>
+    <a href="#map" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">map</a>
+    <a href="#dialogues" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">dialogues</a>
+    <a href="#icons" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">icons</a>
+  </nav>
+
+  <section data-screen-label="Discipline" style="padding:clamp(90px,14vw,220px) clamp(18px,5vw,90px)">
+    <div data-reveal="1" style="display:flex; flex-direction:column; align-items:center; gap:clamp(20px,2.6vw,36px)">
+      <img src="assets/ag/icon-design-green.png" alt="" style="width:clamp(50px,4.6vw,76px); height:clamp(50px,4.6vw,76px); object-fit:contain; display:block">
+      <p style="margin:0; text-align:center; font-size:clamp(11px,.95vw,15px); font-weight:500; letter-spacing:.02em; line-height:1.7; color:rgba(255,255,255,.8)">UI Design<br>Illustration</p>
+    </div>
+    <p data-reveal="1" style="margin:clamp(56px,9vw,140px) auto 0; max-width:24ch; text-align:center; font-size:clamp(28px,4.6vw,76px); font-weight:500; letter-spacing:-.045em; line-height:1.08; color:#fff; text-wrap:balance">An interface built as part of the game world, not on top of it.</p>
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(46px,7vw,110px) auto 0">
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">For <em>Nicktoons &amp; The Dice of Destiny</em>, I worked on the development of the game’s UI, helping define and solve visual and functional challenges across a wide range of interfaces.</p>
+        <p style="margin:0">The project required much more than designing individual screens. Each system needed to feel consistent with the game’s illustrated fantasy world while remaining clear, readable and intuitive during gameplay.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">My work covered everything from core navigation and system menus to character progression, inventory, map navigation, abilities and smaller UI elements used throughout the game.</p>
+        <p style="margin:0">A large portion of the interface was also illustrated manually, allowing the UI to feel like a natural extension of the game’s visual identity rather than a separate layer placed on top of it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="language" data-screen-label="Visual Language" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">building a visual language</span>
+      <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:20ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Parchment, ornaments and one shared system.</h2>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(46px,7vw,110px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">Menus, panels, buttons, icons and information screens were designed around a combination of parchment textures, hand-drawn ornaments, illustrated elements and a color system that helped organize information and interactions.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">One of the main challenges was creating a consistent visual language that could work across very different types of interfaces.</p>
+        <p style="margin:0">The interface also needed to support multiple Nickelodeon characters and environments while maintaining the same overall visual language throughout the game. This approach allowed the UI to feel cohesive across screens with very different purposes.</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <img src="assets/nick/menu.jpg" alt="Main menu" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <p style="margin:16px 0 0; text-align:center; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.38)">main menu</p>
+    </div>
+  </section>
+
+  <section id="menus" data-screen-label="Menus" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">menus &amp; system interfaces</span>
+      <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:20ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Custom shapes instead of generic components.</h2>
+    </div>
+
+    <div data-reveal="1" style="width:min(100%,1180px); margin:clamp(46px,7vw,110px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <video data-lazyvid="1" src="assets/nick/vid/menu-settings.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#050505; border-radius:4px"></video>
+      <p style="margin:16px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">main menu &amp; settings — in motion</p>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(46px,7vw,110px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">These screens required a balance between the game’s illustrated aesthetic and the practical needs of a game menu: clear hierarchy, readable information and intuitive navigation using controller inputs.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">I worked on several of the game’s core system interfaces, including the main menu, settings screens and save/load interfaces.</p>
+        <p style="margin:0">Rather than relying on generic UI components, the interfaces were built around custom shapes, textures, decorative elements and illustrated details that reinforced the game’s fantasy-book visual language.</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(12px,1.4vw,22px); margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <div>
+        <img src="assets/nick/loadgame.jpg" alt="Load game screen" loading="lazy" decoding="async" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; border-radius:4px">
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">load game</p>
+      </div>
+      <div>
+        <img src="assets/nick/settings.jpg" alt="Settings screen" loading="lazy" decoding="async" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; border-radius:4px">
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">settings</p>
+      </div>
+      <div>
+        <img src="assets/nick/challenge.jpg" alt="In-game pop-up" loading="lazy" decoding="async" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; border-radius:4px">
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">in-game pop-up</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="display:flex; justify-content:center; margin:clamp(30px,4.5vw,70px) clamp(18px,5vw,90px) 0">
+      <div style="width:min(100%,1380px)">
+        <video data-lazyvid="1" src="assets/nick/vid/loading.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#050505; border-radius:4px"></video>
+        <p style="margin:16px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">loading screen — in motion</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="characters" data-screen-label="Character Selection" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">character selection</span>
+      <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:20ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Four players, one glance.</h2>
+    </div>
+
+    <div data-reveal="1" style="margin:clamp(46px,7vw,110px) 0 0">
+      <video data-lazyvid="1" src="assets/nick/vid/character-selection.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#050505"></video>
+      <p style="margin:16px clamp(18px,5vw,90px) 0; text-align:center; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.38)">character selection — in motion</p>
+    </div>
+
+    <div data-reveal="1" style="margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <img src="assets/nick/character-selection.jpg" alt="Character selection screen" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <p style="margin:16px 0 0; text-align:center; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.38)">full character selection screen</p>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(56px,9vw,140px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">The interface combines character portraits, large character illustrations, player indicators and color-coded information to make multiplayer selection easy to understand at a glance.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">The character selection screen was designed to support a roster of characters from the Nickelodeon universe while maintaining the same visual language established throughout the game.</p>
+        <p style="margin:0">The surrounding parchment-based layout and illustrated details help connect the interface to the game’s broader fantasy aesthetic.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="inventory" data-screen-label="Inventory" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">inventory &amp; progression</span>
+      <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:20ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">A lot of information, one readable screen.</h2>
+    </div>
+
+    <div data-reveal="1" style="width:min(100%,1180px); margin:clamp(46px,7vw,110px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <video data-lazyvid="1" src="assets/nick/vid/inventory.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#050505; border-radius:4px"></video>
+      <p style="margin:16px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">inventory — in motion</p>
+    </div>
+
+    <div data-reveal="1" style="margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <img src="assets/nick/inventory.jpg" alt="Inventory screen" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <p style="margin:16px 0 0; text-align:center; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.38)">full inventory screen</p>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(56px,9vw,140px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">The inventory combines a large item grid with character information and detailed item descriptions, requiring careful organization of a considerable amount of information within a single screen.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">I also worked on the inventory and character progression interfaces, creating systems for displaying equipment, attributes, item information and player progression.</p>
+        <p style="margin:0">The interface was designed to maintain readability while still preserving the illustrated and handcrafted character of the game.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="upgrades" data-screen-label="Potion Upgrade" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">potion upgrade system</span>
+      <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:20ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Levels, costs and locks, read at a glance.</h2>
+    </div>
+
+    <div data-reveal="1" style="display:flex; justify-content:center; margin:clamp(46px,7vw,110px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <div style="width:min(100%,420px)">
+        <img src="assets/nick/upgrade-panel.png" alt="Potion upgrade panel" loading="lazy" decoding="async" style="width:100%; height:auto; display:block">
+        <p style="margin:14px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34); text-align:center">potion upgrade panel — final artwork</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:clamp(18px,2.4vw,40px); width:min(100%,1500px); margin:clamp(40px,6vw,90px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <div>
+        <img src="assets/nick/upgrade-v2.jpg" alt="Final potion upgrade screen" loading="lazy" decoding="async" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; border-radius:4px">
+        <p style="margin:14px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">final version</p>
+      </div>
+      <div>
+        <img src="assets/nick/upgrade-v1.jpg" alt="Earlier potion upgrade version" loading="lazy" decoding="async" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; border-radius:4px">
+        <p style="margin:14px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">earlier version</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="margin:clamp(30px,4.5vw,70px) clamp(18px,5vw,90px) 0">
+      <video data-lazyvid="1" src="assets/nick/vid/potion-shop.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#050505; border-radius:4px"></video>
+      <p style="margin:16px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">potion upgrade &amp; shop — in motion</p>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(56px,9vw,140px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">The screen needed to communicate different upgrade paths, available levels, costs and the current state of each upgrade in a way that was immediately understandable to the player.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">One of the more specific interfaces I worked on was the potion upgrade system.</p>
+        <p style="margin:0">I developed the visual elements and illustrations used to differentiate the upgrade levels, locked states and available upgrades while maintaining the game’s parchment and illustrated visual language.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="map" data-screen-label="Map" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">map &amp; navigation</span>
+      <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:20ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Navigation drawn into the world.</h2>
+    </div>
+
+    <div data-reveal="1" style="margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <img src="assets/nick/map.jpg" alt="Full map screen" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <p style="margin:16px 0 0; text-align:center; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.38)">full map — area selection, stage markers and states</p>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(56px,9vw,140px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">I worked on UI elements used to identify areas, stages, objectives and their different states, creating icons and markers that could communicate information without competing with the artwork underneath.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">The game’s map required another layer of information hierarchy, combining the illustrated world with navigation, progression and level information.</p>
+        <p style="margin:0">The result was an interface that integrates directly with the illustrated map rather than treating navigation as a separate UI layer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="dialogues" data-screen-label="Dialogue Boxes" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">dialogue boxes &amp; panels</span>
+      <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:20ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Every message on its own piece of paper.</h2>
+    </div>
+
+    <div data-reveal="1" style="margin:clamp(46px,7vw,110px) 0 0">
+      <video data-lazyvid="1" src="assets/nick/vid/dialogue.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#050505"></video>
+      <p style="margin:16px clamp(18px,5vw,90px) 0; text-align:center; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.38)">dialogue boxes — in motion</p>
+    </div>
+
+    <div data-reveal="1" style="width:min(100%,1100px); margin:clamp(46px,7vw,110px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <div>
+        <img src="assets/nick/ui/dialogue-box.png" alt="NPC dialogue box" loading="lazy" decoding="async" style="width:100%; height:auto; display:block">
+        <p style="margin:16px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">npc dialogue box</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(20px,3vw,50px); align-items:center; width:min(100%,1100px); margin:clamp(30px,4.5vw,70px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <div>
+        <img src="assets/nick/ui/new-skill.png" alt="New skill learned panel" loading="lazy" decoding="async" style="width:100%; height:auto; display:block">
+        <p style="margin:16px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">new skill learned</p>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center">
+        <img src="assets/nick/ui/level-up.png" alt="Level up banner" loading="lazy" decoding="async" style="width:min(100%,300px); height:auto; display:block">
+        <p style="margin:16px 0 0; align-self:flex-start; white-space:nowrap; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">level up</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <video data-lazyvid="1" src="assets/nick/vid/level-up.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#050505; border-radius:4px"></video>
+      <p style="margin:16px 0 0; text-align:center; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.38)">level up &amp; labels — in motion</p>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(12px,1.8vw,26px); align-items:center; width:min(100%,900px); margin:clamp(30px,4.5vw,70px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <img src="assets/nick/ui/label-2.png" alt="Ribbon label" loading="lazy" decoding="async" style="width:100%; height:auto; display:block">
+      <img src="assets/nick/ui/label-3.png" alt="Ribbon label" loading="lazy" decoding="async" style="width:100%; height:auto; display:block">
+      <img src="assets/nick/ui/label-4.png" alt="Ribbon label" loading="lazy" decoding="async" style="width:100%; height:auto; display:block">
+      <img src="assets/nick/ui/label-1.png" alt="Scroll label" loading="lazy" decoding="async" style="width:100%; height:auto; display:block">
+    </div>
+    <p style="margin:16px auto 0; width:min(100%,900px); padding:0 clamp(18px,5vw,90px); font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">ribbons, banners and scroll labels</p>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(56px,9vw,140px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">Dialogue boxes, notification panels and level-up screens were drawn as torn paper and parchment, each one shaped around the amount of information it had to carry.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">The same construction rules — torn edges, ornaments, ribbon headers and a limited color system — keep very different message types recognisable as one family.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="icons" data-screen-label="Icons" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">icons &amp; gameplay indicators</span>
+      <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:20ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Drawn by hand, down to the smallest state.</h2>
+    </div>
+
+    <div data-reveal="1" style="display:flex; flex-direction:column; gap:clamp(30px,4.5vw,70px); margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(14px,2vw,30px); align-items:center">
+        <div>
+          <img src="assets/nick/difficulty-icons.png" alt="Difficulty icon progression" loading="lazy" decoding="async" style="width:100%; height:auto; display:block">
+          <p style="margin:16px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">difficulty icon progression</p>
+        </div>
+        <div>
+          <video data-lazyvid="1" src="assets/nick/vid/difficulty.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#050505; border-radius:4px"></video>
+          <p style="margin:16px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">level &amp; difficulty selection — in motion</p>
+        </div>
+      </div>
+      <div>
+        <img src="assets/nick/skill-indicator.png" alt="Skill area indicator states" loading="lazy" decoding="async" style="width:100%; height:auto; display:block">
+        <p style="margin:16px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">skill area-of-effect indicator</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:minmax(0,933fr) minmax(0,700fr); gap:clamp(40px,7vw,130px); align-items:center; justify-items:center; width:min(100%,1700px); margin:clamp(30px,4.5vw,70px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <div style="width:100%">
+        <img src="assets/nick/ui/general-icons.png" alt="General icon set" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; object-fit:contain">
+        <p style="margin:16px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34); text-align:center">map, gameplay and player icons</p>
+      </div>
+      <div style="width:100%">
+        <img src="assets/nick/ui/boss-icons.png" alt="Boss icons" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; object-fit:contain">
+        <p style="margin:16px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34); text-align:center">boss icons</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(56px,9vw,140px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">Many of these elements were illustrated manually, allowing them to maintain the same hand-drawn quality and visual language as the rest of the interface.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">Beyond the larger interfaces, I also created a variety of smaller UI elements used throughout the game. This included map icons, difficulty indicators, gameplay symbols, ability indicators and other visual components required by different systems.</p>
+        <p style="margin:0">The skill area-of-effect indicator was another example where the UI needed to communicate gameplay information clearly while still fitting naturally into the game’s visual world.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Closing" style="padding:clamp(90px,14vw,220px) clamp(18px,5vw,90px); border-top:1px solid rgba(255,255,255,.08); text-align:center">
+    <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">designed as part of the game world</span>
+    <p data-reveal="1" style="margin:clamp(18px,2.4vw,34px) auto 0; max-width:26ch; font-size:clamp(26px,4.2vw,68px); font-weight:500; letter-spacing:-.045em; line-height:1.1; color:#fff; text-wrap:balance">From the larger screens to the smallest icons, the same illustrated language.</p>
+    <p data-reveal="1" style="margin:clamp(28px,4vw,56px) auto 0; max-width:66ch; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.6); text-wrap:pretty">Working across so many different systems also meant solving very different interface problems while maintaining consistency — from menus and inventory management to character selection, progression systems and real-time gameplay indicators.</p>
+  </section>
+
+  <section data-screen-label="Contact CTA" style="padding:0 clamp(18px,5vw,90px) clamp(70px,11vw,160px); text-align:center">
+    <h2 style="margin:0; font-size:clamp(38px,7.4vw,130px); font-weight:600; letter-spacing:-.05em; line-height:1; color:#fff">lets talk!</h2>
+    <div style="display:flex; justify-content:center; gap:clamp(12px,1.6vw,20px); flex-wrap:wrap; margin-top:clamp(28px,4vw,52px)">
+      <a href="Portfolio.dc.html#contact" style="padding:15px 34px; border-radius:100px; background:#ff9f1c; color:#000; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; transition:opacity .3s; white-space:nowrap" style-hover="opacity:.82; color:#000">get in touch</a>
+      <a href="Portfolio.dc.html#work" style="padding:15px 34px; border-radius:100px; border:1px solid rgba(255,255,255,.28); color:rgba(255,255,255,.85); font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; transition:border-color .3s, color .3s; white-space:nowrap" style-hover="border-color:#fff; color:#fff">back to work</a>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;autoplayVideos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Media&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if ((this.props.scrollReveal ?? true) && !reduce) {
+      // reveal apenas em blocos de texto — mídia entra sem animação
+      const items = Array.from(document.querySelectorAll('[data-reveal]'))
+        .filter(el => !el.querySelector('img, video, iframe'));
+      items.forEach(el => {
+        el.dataset.mediaReveal = '0';
+        el.style.transition = 'opacity .9s cubic-bezier(.22,.61,.36,1), transform 1s cubic-bezier(.22,.61,.36,1)';
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+      });
+      const show = el => {
+        el.style.opacity = '1';
+        if (el.dataset.mediaReveal !== '1') el.style.transform = 'none';
+        const done = () => { el.style.transition = ''; el.style.willChange = ''; el.removeEventListener('transitionend', done); };
+        el.addEventListener('transitionend', done);
+      };
+      if ('IntersectionObserver' in window) {
+        this._io = new IntersectionObserver(en => {
+          en.forEach(e => { if (e.isIntersecting) { show(e.target); this._io.unobserve(e.target); } });
+        }, { rootMargin: '200px 0px -8% 0px' });
+        items.forEach(el => this._io.observe(el));
+      } else items.forEach(show);
+    }
+
+    const vids = Array.from(document.querySelectorAll('[data-lazyvid]'));
+    const autoplay = (this.props.autoplayVideos ?? true) && !reduce;
+    vids.forEach(v => { v.muted = true; v.loop = true; v.playsInline = true; v.disablePictureInPicture = true; });
+    if ('IntersectionObserver' in window) {
+      this._pio = new IntersectionObserver(en => {
+        en.forEach(e => {
+          if (!e.isIntersecting) return;
+          if (e.target.preload !== 'auto') e.target.preload = 'auto';
+          this._pio.unobserve(e.target);
+        });
+      }, { rootMargin: '120% 0px' });
+      vids.forEach(v => this._pio.observe(v));
+
+      this._vio = new IntersectionObserver(en => {
+        en.forEach(e => {
+          const v = e.target;
+          if (e.isIntersecting && autoplay) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+          else if (!v.paused) v.pause();
+        });
+      }, { threshold: 0.15 });
+      vids.forEach(v => this._vio.observe(v));
+    }
+    this._vis = () => { if (document.hidden) vids.forEach(v => v.pause()); };
+    document.addEventListener('visibilitychange', this._vis);
+
+    const hero = document.querySelector('[data-heroparallax]');
+    const chips = Array.from(document.querySelectorAll('[data-chip]'));
+    const targets = chips.map(a => document.querySelector(a.getAttribute('href')));
+    let raf = 0;
+    const frame = () => {
+      raf = 0;
+      if (hero && !reduce) {
+        const r = hero.parentElement.getBoundingClientRect();
+        if (r.bottom > -200 && r.top < window.innerHeight + 200) {
+          const p = Math.max(-1, Math.min(1, (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight));
+          hero.style.transform = 'translate3d(0,' + (-p * r.height * 0.07).toFixed(2) + 'px,0) scale(1.1)';
+        }
+      }
+      let active = -1;
+      targets.forEach((el, i) => { if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.4) active = i; });
+      chips.forEach((a, i) => { a.style.color = i === active ? '#fff' : 'rgba(255,255,255,.55)'; });
+    };
+    this._scroll = () => { if (!raf) raf = requestAnimationFrame(frame); };
+    window.addEventListener('scroll', this._scroll, { passive: true });
+    window.addEventListener('resize', this._scroll, { passive: true });
+    frame();
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._vio) this._vio.disconnect();
+    if (this._pio) this._pio.disconnect();
+    document.removeEventListener('visibilitychange', this._vis);
+    if (this._fit) window.removeEventListener('resize', this._fit);
+    window.removeEventListener('scroll', this._scroll);
+    window.removeEventListener('resize', this._scroll);
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

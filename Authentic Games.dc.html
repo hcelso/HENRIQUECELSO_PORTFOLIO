@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#000; }
+  body { font-family: Archivo, "Helvetica Neue", Helvetica, sans-serif; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:#ff9f1c; text-decoration:none; }
+  a:hover { color:#fff; }
+  ::selection { background:#ff9f1c; color:#000; }
+  video { display:block; }
+  html { scroll-behavior:smooth; }
+</style>
+</helmet>
+<div style="background:#000; color:#fff; position:relative; overflow:hidden">
+
+  <header style="position:fixed; top:0; left:0; right:0; z-index:60; display:flex; align-items:center; justify-content:space-between; padding:clamp(16px,2vw,26px) clamp(18px,3.2vw,46px); gap:16px; backdrop-filter:blur(18px); background:rgba(0,0,0,.55); border-bottom:1px solid rgba(255,255,255,.07)">
+    <nav style="display:flex; gap:clamp(16px,2.6vw,38px); align-items:center; flex-wrap:wrap">
+      <a href="Portfolio.dc.html#home" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">home</a>
+      <a href="Portfolio.dc.html#work" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">my work</a>
+      <a href="Portfolio.dc.html#about" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">about</a>
+      <a href="Portfolio.dc.html#contact" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">contact</a>
+    </nav>
+    <div style="display:flex; gap:22px; align-items:center">
+      <a href="https://instagram.com" target="_blank" rel="noreferrer" style="display:grid; place-items:center; width:17px; height:9px; opacity:.8; transition:opacity .3s ease" style-hover="opacity:1">
+        <img src="assets/icone_instagram.png" alt="Instagram" style="width:100%; height:100%; object-fit:contain; display:block">
+      </a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="position:relative; height:100vh; min-height:620px; overflow:hidden">
+    <img data-heroparallax="1" src="assets/ag/hero.jpg" alt="Authentic Games: No Império Desconectado" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:translate3d(0,0,0) scale(1.1); will-change:transform">
+    <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 32%, rgba(0,0,0,.35) 72%, #000 100%)"></div>
+
+    <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 clamp(18px,5vw,90px); gap:clamp(14px,1.6vw,22px)">
+      <span style="font-size:clamp(9px,.78vw,12px); font-weight:400; letter-spacing:.24em; color:rgba(255,255,255,.78)">Created for Greydot Lab · 2026</span>
+      <h1 style="margin:0; font-size:clamp(46px,8.4vw,150px); font-weight:600; letter-spacing:-.05em; line-height:.94; color:#fff">Authentic Games</h1>
+      <p style="margin:0; font-size:clamp(16px,2.1vw,38px); font-weight:300; letter-spacing:-.02em; color:rgba(255,255,255,.85)">No Império Desconectado</p>
+      <p style="margin:clamp(10px,1.4vw,20px) 0 0; max-width:44ch; font-size:clamp(13px,1vw,16px); font-weight:400; line-height:1.7; color:rgba(255,255,255,.6); text-wrap:pretty">Opening title, post-production, credits and key art for a feature film released in cinemas and on Disney+.</p>
+    </div>
+
+    <div style="position:absolute; left:0; right:0; bottom:clamp(22px,3vw,44px); display:flex; justify-content:center; align-items:center; gap:clamp(18px,3vw,44px)">
+      <img src="assets/ag/logo-cinema.png" alt="Cinema" style="height: 39px; width: 44px; opacity: .75; display: block">
+      <img src="assets/ag/logo-disney.png" alt="Disney+" style="height: 32px; width: 58px; opacity: .75; display: block">
+    </div>
+  </section>
+
+  <nav data-chapters="1" style="position:sticky; top:clamp(48px,5.4vw,66px); z-index:40; display:flex; justify-content:center; gap:clamp(14px,2.2vw,34px); flex-wrap:wrap; padding:16px clamp(18px,5vw,90px); background:rgba(0,0,0,.6); backdrop-filter:blur(18px); border-bottom:1px solid rgba(255,255,255,.07)">
+    <a href="#opening" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">opening</a>
+    <a href="#post" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">post &amp; vfx</a>
+    <a href="#credits" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">credits</a>
+    <a href="#keyart" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">key art</a>
+  </nav>
+
+  <section data-screen-label="Disciplines" style="padding:clamp(90px,14vw,220px) clamp(18px,5vw,90px)">
+    <p data-reveal="1" style="margin:0 auto; max-width:22ch; text-align:center; font-size:clamp(28px,4.6vw,76px); font-weight:500; letter-spacing:-.045em; line-height:1.08; color:#fff; text-wrap:balance">Four stages of one film, from first frame to final poster.</p>
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(24px,4vw,70px); width:min(100%,980px); margin:clamp(56px,9vw,140px) auto 0">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:clamp(16px,2vw,28px)">
+        <img src="assets/ag/icon-motion-green.png" alt="" style="width:clamp(46px,4.2vw,68px); height:clamp(46px,4.2vw,68px); object-fit:contain; display:block">
+        <p style="margin:0; text-align:center; font-size:clamp(11px,.95vw,15px); font-weight:500; letter-spacing:.02em; line-height:1.7; color:rgba(255,255,255,.8)">Logo Opening Motion<br>Final Credits</p>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:clamp(16px,2vw,28px)">
+        <img src="assets/ag/icon-design-green.png" alt="" style="width:clamp(46px,4.2vw,68px); height:clamp(46px,4.2vw,68px); object-fit:contain; display:block">
+        <p style="margin:0; text-align:center; font-size:clamp(11px,.95vw,15px); font-weight:500; letter-spacing:.02em; line-height:1.7; color:rgba(255,255,255,.8)">Cinema Movie Cover<br>Marketing Material</p>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:clamp(16px,2vw,28px)">
+        <img src="assets/ag/icon-color-green.png" alt="" style="width:clamp(46px,4.2vw,68px); height:clamp(46px,4.2vw,68px); object-fit:contain; display:block">
+        <p style="margin:0; text-align:center; font-size:clamp(11px,.95vw,15px); font-weight:500; letter-spacing:.02em; line-height:1.7; color:rgba(255,255,255,.8)">Color Refinement<br>VFX</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="opening" data-screen-label="01 Opening" style="padding:clamp(70px,11vw,170px) 0 clamp(70px,11vw,170px)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">01 — opening sequence</span>
+      <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:18ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">A universe of cubes, then a Big Bang.</h2>
+    </div>
+
+    <div data-reveal="1" style="margin:clamp(46px,7vw,110px) 0 0">
+      <div style="position:relative; padding-top:52.71%; background:#050505">
+        <iframe src="https://player.vimeo.com/video/1221022028?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;badge=0&amp;byline=0&amp;title=0&amp;portrait=0&amp;controls=0&amp;dnt=1&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" title="opening_sequence_full_motion_01" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0; display:block; pointer-events:none"></iframe>
+      </div>
+      <p style="margin:16px clamp(18px,5vw,90px) 0; text-align:center; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.38)">final opening sequence</p>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(56px,9vw,140px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">The concept was built around a space filled with cubes gradually emerging from the horizon and moving toward the camera, progressively taking over the screen until culminating in a Big Bang-inspired explosion.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">The first challenge of the project was to develop the film’s opening sequence, introducing the Authentic Games: No Império Desconectado logo in a way that reinforced the technological universe of the story.</p>
+        <p style="margin:0">From this explosion, the film logo was launched toward the camera, while loose Ethernet cables generated electrical discharges around the title. The sequence combined different techniques in After Effects: the cubes were created using a particle system, while the electrical discharges were animated frame by frame, allowing for a more organic and controlled result.</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(12px,1.4vw,22px); margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <div>
+        <video data-lazyvid="1" src="assets/ag/open-cubes.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">particle system — cubes</p>
+      </div>
+      <div>
+        <video data-lazyvid="1" src="assets/ag/open-cables.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">DISCHARGES ANIMATION POLISH</p>
+      </div>
+      <div>
+        <video data-lazyvid="1" src="assets/ag/open-logo.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">logo entry</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="post" data-screen-label="02 Post &amp; VFX" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">02 — post-production &amp; vfx</span>
+      <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:18ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Every scene, refined and integrated.</h2>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(46px,7vw,110px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">I was responsible for the color refinement of the scenes and for applying VFX to specific sequences, working with elements such as reflections, lighting and additional effects to better integrate the 3D assets.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">After completing the opening, I moved into the film’s post-production, taking on one of the most extensive stages of the project.</p>
+        <p style="margin:0">Alongside the visual work, I was also involved in editing the material and reviewing renders delivered by the 3D team. This required constant attention to detail to identify rendering issues, visual inconsistencies and technical problems that needed to be sent back for correction.</p>
+        <p style="margin:0">It was a demanding stage that required both visual precision and responsibility, particularly when dealing with a large amount of material and ensuring that issues were identified before the final delivery.</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <video data-lazyvid="1" src="assets/ag/vfx-color.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+      <p style="margin:16px 0 0; text-align:center; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.38)">color refinement — before / after</p>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(12px,1.4vw,22px); margin:clamp(22px,3vw,40px) clamp(18px,5vw,90px) 0">
+      <div>
+        <video data-lazyvid="1" src="assets/ag/vfx-color-2.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">color refinement</p>
+      </div>
+      <div>
+        <video data-lazyvid="1" src="assets/ag/vfx-color-3.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">color refinement</p>
+      </div>
+      <div>
+        <video data-lazyvid="1" src="assets/ag/vfx-glasses.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">vfx — glasses reflections</p>
+      </div>
+      <div>
+        <video data-lazyvid="1" src="assets/ag/vfx-editing.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">editing</p>
+      </div>
+      <div>
+        <video data-lazyvid="1" src="assets/ag/vfx-editing-2.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">editing</p>
+      </div>
+      <div>
+        <video data-lazyvid="1" src="assets/ag/vfx-window.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">vfx — window reflections</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="credits" data-screen-label="03 Credits" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">03 — credits sequence</span>
+      <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:18ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Concept art, brought into motion.</h2>
+    </div>
+
+    <div data-reveal="1" style="margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <video data-lazyvid="1" src="assets/ag/credits.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+      <p style="margin:16px 0 0; text-align:center; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.38)">final credits sequence</p>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(56px,9vw,140px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">Instead of a traditional presentation based solely on a black screen, we turned static artwork from the film’s universe into animated environments.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">I prepared the artwork in Photoshop, separating and rebuilding the necessary elements so they could be animated later in After Effects.</p>
+        <p style="margin:0">Using these originally static images, I created camera movements and different levels of depth through parallax, transforming the concept art into small animated scenes that accompanied the credits.</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(12px,1.4vw,22px); margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <img src="assets/ag/credits-01.jpg" alt="Credits concept art" loading="lazy" decoding="async" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; border-radius:4px">
+      <img src="assets/ag/credits-06.jpg" alt="Credits concept art" loading="lazy" decoding="async" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; border-radius:4px">
+      <img src="assets/ag/credits-10.jpg" alt="Credits concept art" loading="lazy" decoding="async" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block; border-radius:4px">
+    </div>
+    <p style="margin:12px clamp(18px,5vw,90px) 0; text-align:center; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">original concept art</p>
+  </section>
+
+  <section id="keyart" data-screen-label="04 Key Art" style="padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="text-align:center; padding:0 clamp(18px,5vw,90px)">
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">04 — key art &amp; cover design</span>
+      <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) auto 0; max-width:18ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">From raw render to finished poster.</h2>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(12px,1.4vw,22px); margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <div>
+        <img src="assets/ag/cover-concept-opt.jpg" alt="Original concept art" loading="lazy" decoding="async" style="width:100%; aspect-ratio:2/3; object-fit:cover; display:block; border-radius:4px">
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">concept art</p>
+      </div>
+      <div>
+        <img src="assets/ag/cover-render-opt.jpg" alt="Raw 3D render" loading="lazy" decoding="async" style="width:100%; aspect-ratio:2/3; object-fit:cover; display:block; border-radius:4px; background:#4a72cf">
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">raw 3d render</p>
+      </div>
+      <div>
+        <img src="assets/ag/cover-opt.jpg" alt="Cover design poster" loading="lazy" decoding="async" style="width:100%; aspect-ratio:2/3; object-fit:cover; display:block; border-radius:4px">
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">cover design poster</p>
+      </div>
+      <div>
+        <video data-lazyvid="1" src="assets/ag/cover-motion.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:2/3; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">motion cover</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(56px,9vw,140px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">A significant part of the work was done manually — lighting, shadows and rim lights — so that every element felt as though it belonged to the same environment.</p>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">The initial composition had already been created by a concept artist and served as the visual foundation for the piece. My role was to turn this concept into a final piece using 3D character renders produced specifically to match the positions established in the original artwork.</p>
+        <p style="margin:0">I rebuilt the composition in Photoshop, combining image compositing, retouching and digital painting to bring the 3D renders closer to the visual language of the original concept — a hybrid process that transformed the 3D assets into a finished piece of visual communication.</p>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(12px,1.4vw,22px); margin:clamp(46px,7vw,110px) clamp(18px,5vw,90px) 0">
+      <div>
+        <video data-lazyvid="1" src="assets/ag/cover-process-1.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">process</p>
+      </div>
+      <div>
+        <video data-lazyvid="1" src="assets/ag/cover-process-2.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">process</p>
+      </div>
+      <div>
+        <video data-lazyvid="1" src="assets/ag/cover-process-3.mp4" muted="" loop="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; border-radius:4px"></video>
+        <p style="margin:12px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">process</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Closing" style="padding:clamp(90px,14vw,220px) clamp(18px,5vw,90px); border-top:1px solid rgba(255,255,255,.08); text-align:center">
+    <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">one project, multiple disciplines</span>
+    <p data-reveal="1" style="margin:clamp(18px,2.4vw,34px) auto 0; max-width:26ch; font-size:clamp(26px,4.2vw,68px); font-weight:500; letter-spacing:-.045em; line-height:1.1; color:#fff; text-wrap:balance">Motion design, VFX, color refinement, editing, compositing, digital painting, graphic design and marketing, in the same production.</p>
+    <p data-reveal="1" style="margin:clamp(28px,4vw,56px) auto 0; max-width:66ch; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.6); text-wrap:pretty">More than working on isolated deliverables, the project allowed me to follow the material through different stages of production — identifying problems, finding solutions and adapting the film’s visual language to different creative and communication needs.</p>
+  </section>
+
+  <section data-screen-label="Contact CTA" style="padding:0 clamp(18px,5vw,90px) clamp(70px,11vw,160px); text-align:center">
+    <h2 style="margin:0; font-size:clamp(38px,7.4vw,130px); font-weight:600; letter-spacing:-.05em; line-height:1; color:#fff">lets talk!</h2>
+    <div style="display:flex; justify-content:center; gap:clamp(12px,1.6vw,20px); flex-wrap:wrap; margin-top:clamp(28px,4vw,52px)">
+      <a href="Portfolio.dc.html#contact" style="padding:15px 34px; border-radius:100px; background:#ff9f1c; color:#000; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; transition:opacity .3s; white-space:nowrap" style-hover="opacity:.82; color:#000">get in touch</a>
+      <a href="Portfolio.dc.html#work" style="padding:15px 34px; border-radius:100px; border:1px solid rgba(255,255,255,.28); color:rgba(255,255,255,.85); font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; transition:border-color .3s, color .3s; white-space:nowrap" style-hover="border-color:#fff; color:#fff">back to work</a>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;autoplayVideos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Media&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if ((this.props.scrollReveal ?? true) && !reduce) {
+      const items = Array.from(document.querySelectorAll('[data-reveal]'));
+      items.forEach(el => {
+        el.style.transition = 'opacity 1s cubic-bezier(.22,.61,.36,1), transform 1.1s cubic-bezier(.22,.61,.36,1)';
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+      });
+      const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; };
+      if ('IntersectionObserver' in window) {
+        this._io = new IntersectionObserver(en => {
+          en.forEach(e => { if (e.isIntersecting) { show(e.target); this._io.unobserve(e.target); } });
+        }, { rootMargin: '0px 0px -12% 0px' });
+        items.forEach(el => this._io.observe(el));
+      } else items.forEach(show);
+    }
+
+    const vids = Array.from(document.querySelectorAll('[data-lazyvid]'));
+    const autoplay = (this.props.autoplayVideos ?? true) && !reduce;
+    vids.forEach(v => { v.muted = true; v.loop = true; v.playsInline = true; v.disablePictureInPicture = true; });
+
+    if ('IntersectionObserver' in window) {
+      this._pio = new IntersectionObserver(en => {
+        en.forEach(e => {
+          if (!e.isIntersecting) return;
+          if (e.target.preload !== 'auto') e.target.preload = 'auto';
+          this._pio.unobserve(e.target);
+        });
+      }, { rootMargin: '60% 0px' });
+      vids.forEach(v => this._pio.observe(v));
+
+      this._vio = new IntersectionObserver(en => {
+        en.forEach(e => {
+          const v = e.target;
+          if (e.isIntersecting && autoplay) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+          else if (!v.paused) v.pause();
+        });
+      }, { threshold: 0.15 });
+      vids.forEach(v => this._vio.observe(v));
+    }
+
+    const hero = document.querySelector('[data-heroparallax]');
+    const chips = Array.from(document.querySelectorAll('[data-chip]'));
+    const targets = chips.map(a => document.querySelector(a.getAttribute('href')));
+    let raf = 0;
+    const frame = () => {
+      raf = 0;
+      if (hero && !reduce) {
+        const r = hero.parentElement.getBoundingClientRect();
+        if (r.bottom > -200 && r.top < window.innerHeight + 200) {
+          const p = Math.max(-1, Math.min(1, (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight));
+          hero.style.transform = 'translate3d(0,' + (-p * r.height * 0.07).toFixed(2) + 'px,0) scale(1.1)';
+        }
+      }
+      let active = -1;
+      targets.forEach((el, i) => { if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.4) active = i; });
+      chips.forEach((a, i) => { a.style.color = i === active ? '#fff' : 'rgba(255,255,255,.55)'; });
+    };
+    this._scroll = () => { if (!raf) raf = requestAnimationFrame(frame); };
+    window.addEventListener('scroll', this._scroll, { passive: true });
+    window.addEventListener('resize', this._scroll, { passive: true });
+    frame();
+
+    this._vis = () => { if (document.hidden) vids.forEach(v => v.pause()); };
+    document.addEventListener('visibilitychange', this._vis);
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._vio) this._vio.disconnect();
+    if (this._pio) this._pio.disconnect();
+    window.removeEventListener('scroll', this._scroll);
+    window.removeEventListener('resize', this._scroll);
+    document.removeEventListener('visibilitychange', this._vis);
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

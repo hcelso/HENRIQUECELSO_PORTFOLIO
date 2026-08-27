@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#000; }
+  body { font-family: Archivo, "Helvetica Neue", Helvetica, sans-serif; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:#ff9f1c; text-decoration:none; }
+  a:hover { color:#fff; }
+  ::selection { background:#ff9f1c; color:#000; }
+  html { scroll-behavior:smooth; }
+</style>
+</helmet>
+<div style="background:#000; color:#fff; position:relative; overflow:hidden">
+
+  <header style="position:fixed; top:0; left:0; right:0; z-index:60; display:flex; align-items:center; justify-content:space-between; padding:clamp(16px,2vw,26px) clamp(18px,3.2vw,46px); gap:16px; backdrop-filter:blur(18px); background:rgba(0,0,0,.55); border-bottom:1px solid rgba(255,255,255,.07)">
+    <nav style="display:flex; gap:clamp(16px,2.6vw,38px); align-items:center; flex-wrap:wrap">
+      <a href="Portfolio.dc.html#home" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">home</a>
+      <a href="Portfolio.dc.html#work" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">my work</a>
+      <a href="About.dc.html" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:#fff; white-space:nowrap">about</a>
+      <a href="Portfolio.dc.html#contact" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">contact</a>
+    </nav>
+    <div style="display:flex; gap:22px; align-items:center">
+      <a href="https://instagram.com" target="_blank" rel="noreferrer" style="display:grid; place-items:center; width:17px; height:9px; opacity:.8; transition:opacity .3s ease" style-hover="opacity:1">
+        <img src="assets/icone_instagram.png" alt="Instagram" style="width:100%; height:100%; object-fit:contain; display:block">
+      </a>
+    </div>
+  </header>
+
+  <section data-screen-label="Intro" style="min-height:100vh; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); align-items:center; gap:clamp(40px,5vw,80px); padding:clamp(120px,16vh,190px) clamp(18px,5vw,90px) clamp(70px,11vw,140px)">
+    <div data-reveal="1" style="order:-1; justify-self:center; width:min(100%,760px)">
+      <img src="assets/portrait.png" alt="Henrique Celso" fetchpriority="high" decoding="async" style="width: 947px; height: 1278px; display: block; position: relative; left: -146px">
+    </div>
+    <div>
+      <span style="font-size:clamp(9px,.78vw,12px); font-weight:400; letter-spacing:.24em; color:rgba(255,255,255,.78)">Independent creative · based in Brazil</span>
+      <h1 style="margin:clamp(14px,1.8vw,24px) 0 0; font-size:clamp(38px,6vw,104px); font-weight:600; letter-spacing:-.05em; line-height:.96; color:#fff">Henrique Celso</h1>
+      <p style="margin:clamp(10px,1.2vw,16px) 0 0; font-size:clamp(16px,2vw,34px); font-weight:300; letter-spacing:-.02em; color:rgba(255,255,255,.88)">Creative / Visual Designer</p>
+      <p style="margin:clamp(24px,3vw,44px) 0 0; max-width:48ch; font-size:clamp(14px,1.05vw,17px); line-height:1.75; color:rgba(255,255,255,.7); text-wrap:pretty">A multidisciplinary creative working across design, motion, image and 3D — turning ideas into visual experiences.</p>
+      <div style="display:flex; gap:clamp(12px,1.6vw,20px); flex-wrap:wrap; margin-top:clamp(28px,4vw,52px)">
+        <a href="Portfolio.dc.html#work" style="padding:15px 34px; border-radius:100px; background:#ff9f1c; color:#000; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; transition:opacity .3s; white-space:nowrap" style-hover="opacity:.82; color:#000">see the work</a>
+        <a href="Portfolio.dc.html#contact" style="padding:15px 34px; border-radius:100px; border:1px solid rgba(255,255,255,.28); color:rgba(255,255,255,.85); font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; transition:border-color .3s, color .3s; white-space:nowrap" style-hover="border-color:#fff; color:#fff">get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Reel" style="padding:clamp(70px,11vw,170px) clamp(18px,5vw,90px); border-top:1px solid rgba(255,255,255,.08)">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:clamp(18px,3vw,48px); flex-wrap:wrap; width:min(100%,1500px); margin:0 auto">
+      <h2 data-reveal="1" style="margin:0; font-size:clamp(38px,7vw,120px); font-weight:600; letter-spacing:-.055em; line-height:.92; color:#fff">Motion reel</h2>
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">selected work</span>
+    </div>
+    <div style="width:min(100%,1500px); margin:clamp(32px,4.5vw,64px) auto 0">
+      <div style="position:relative; padding-top:56.25%; background:#050505; border-radius:4px; overflow:hidden">
+        <iframe data-reel="1" src="https://player.vimeo.com/video/1220255111?muted=1&amp;loop=1&amp;autoplay=0&amp;autopause=0&amp;badge=0&amp;byline=0&amp;title=0&amp;portrait=0&amp;dnt=1&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" title="Henrique Celso — motion reel" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; border:0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Statement" style="padding:clamp(70px,11vw,170px) clamp(18px,5vw,90px); border-top:1px solid rgba(255,255,255,.08)">
+    <p data-reveal="1" style="margin:0 auto; max-width:24ch; text-align:center; font-size:clamp(28px,4.8vw,80px); font-weight:500; letter-spacing:-.045em; line-height:1.06; color:#fff; text-wrap:balance">Different disciplines. One creative practice.</p>
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(52px,8vw,120px) auto 0">
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">I don't work within a single medium. I work with whatever the idea needs.</p>
+        <p style="margin:0">My professional identity isn't built on a single specialty, but on the ability to combine different creative disciplines according to what each project asks for. Depending on the brief, that means moving between concept, design, image creation, animation, editing and final delivery.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">The strongest value of working this way shows up on projects where a client needs one creative capable of contributing across several stages at once, from the first concept to the final file.</p>
+        <p style="margin:0">The technique matters, but the work starts before it: understanding the idea and finding the clearest visual way to say it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Journey" style="padding:clamp(70px,11vw,170px) clamp(18px,5vw,90px); border-top:1px solid rgba(255,255,255,.08)">
+    <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">the path</span>
+    <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) 0 0; max-width:20ch; font-size:clamp(32px,5.4vw,92px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">An expanding toolkit, not a change of career.</h2>
+    <p data-reveal="1" style="margin:clamp(24px,3vw,44px) 0 0; max-width:62ch; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">I started in 2013 as a graphic designer. Each discipline I picked up after that was added to solve a problem the previous one couldn't — never as a reset.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr)); gap:clamp(20px,2.6vw,44px); width:min(100%,1500px); margin:clamp(52px,8vw,120px) auto 0">
+      <div data-reveal="1" style="display:flex; flex-direction:column; gap:14px; padding-top:22px; border-top:1px solid rgba(255,255,255,.14)">
+        <span style="font-size:10px; font-weight:600; letter-spacing:.34em; text-transform:uppercase; color:#ff9f1c">2013</span>
+        <h3 style="margin:0; font-size:clamp(17px,1.5vw,25px); font-weight:500; letter-spacing:-.03em; color:#fff">Graphic design</h3>
+        <p style="margin:0; font-size:clamp(12.5px,.95vw,15px); line-height:1.75; color:rgba(255,255,255,.58); text-wrap:pretty">The foundation: composition, type, hierarchy and the discipline of making an idea legible.</p>
+      </div>
+      <div data-reveal="1" style="display:flex; flex-direction:column; gap:14px; padding-top:22px; border-top:1px solid rgba(255,255,255,.14)">
+        <span style="font-size:10px; font-weight:600; letter-spacing:.34em; text-transform:uppercase; color:#ff9f1c">then</span>
+        <h3 style="margin:0; font-size:clamp(17px,1.5vw,25px); font-weight:500; letter-spacing:-.03em; color:#fff">Motion &amp; audiovisual</h3>
+        <p style="margin:0; font-size:clamp(12.5px,.95vw,15px); line-height:1.75; color:rgba(255,255,255,.58); text-wrap:pretty">Animation, video editing, color and compositing — design extended into time, rhythm and sound.</p>
+      </div>
+      <div data-reveal="1" style="display:flex; flex-direction:column; gap:14px; padding-top:22px; border-top:1px solid rgba(255,255,255,.14)">
+        <span style="font-size:10px; font-weight:600; letter-spacing:.34em; text-transform:uppercase; color:#ff9f1c">then</span>
+        <h3 style="margin:0; font-size:clamp(17px,1.5vw,25px); font-weight:500; letter-spacing:-.03em; color:#fff">Illustration &amp; visual development</h3>
+        <p style="margin:0; font-size:clamp(12.5px,.95vw,15px); line-height:1.75; color:rgba(255,255,255,.58); text-wrap:pretty">Building the images themselves instead of only arranging them — characters, worlds, visual language.</p>
+      </div>
+      <div data-reveal="1" style="display:flex; flex-direction:column; gap:14px; padding-top:22px; border-top:1px solid rgba(255,255,255,.14)">
+        <span style="font-size:10px; font-weight:600; letter-spacing:.34em; text-transform:uppercase; color:#ff9f1c">now</span>
+        <h3 style="margin:0; font-size:clamp(17px,1.5vw,25px); font-weight:500; letter-spacing:-.03em; color:#fff">3D painting &amp; texturing</h3>
+        <p style="margin:0; font-size:clamp(12.5px,.95vw,15px); line-height:1.75; color:rgba(255,255,255,.58); text-wrap:pretty">Hand-painted surfaces in Substance Painter, where the graphic side of the practice meets 3D production.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Capabilities" style="padding:clamp(70px,11vw,170px) clamp(18px,5vw,90px); border-top:1px solid rgba(255,255,255,.08)">
+    <div style="display:flex; flex-direction:column; align-items:center; text-align:center; width:min(100%,900px); margin:0 auto">
+      <div style="display:flex; flex-direction:column; align-items:center">
+        <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">what I do</span>
+        <h2 data-reveal="1" style="margin:clamp(16px,2vw,28px) 0 0; max-width:18ch; margin-left:auto; margin-right:auto; font-size:clamp(28px,4vw,64px); font-weight:500; letter-spacing:-.05em; line-height:1.06; color:#fff; text-wrap:balance">Concept to final delivery.</h2>
+        <p data-reveal="1" style="margin:clamp(22px,3vw,40px) 0 0; max-width:52ch; margin-left:auto; margin-right:auto; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">On most projects I take part in several stages rather than a single hand-off. That continuity is usually what keeps a piece coherent from the first sketch to the export.</p>
+        <div data-reveal="1" style="margin:clamp(28px,3.6vw,52px) 0 0">
+          <span style="font-size:10px; font-weight:600; letter-spacing:.34em; text-transform:uppercase; color:rgba(255,255,255,.35)">Tools</span>
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:8px 10px; margin-top:16px">
+            <span style="padding:9px 16px; border:1px solid rgba(255,255,255,.18); border-radius:100px; font-size:clamp(11px,.85vw,13px); letter-spacing:.02em; color:rgba(255,255,255,.8)">Photoshop</span>
+            <span style="padding:9px 16px; border:1px solid rgba(255,255,255,.18); border-radius:100px; font-size:clamp(11px,.85vw,13px); letter-spacing:.02em; color:rgba(255,255,255,.8)">After Effects</span>
+            <span style="padding:9px 16px; border:1px solid rgba(255,255,255,.18); border-radius:100px; font-size:clamp(11px,.85vw,13px); letter-spacing:.02em; color:rgba(255,255,255,.8)">Illustrator</span>
+            <span style="padding:9px 16px; border:1px solid rgba(255,255,255,.18); border-radius:100px; font-size:clamp(11px,.85vw,13px); letter-spacing:.02em; color:rgba(255,255,255,.8)">Premiere Pro</span>
+            <span style="padding:9px 16px; border:1px solid rgba(255,255,255,.18); border-radius:100px; font-size:clamp(11px,.85vw,13px); letter-spacing:.02em; color:rgba(255,255,255,.8)">DaVinci Resolve</span>
+            <span style="padding:9px 16px; border:1px solid rgba(255,255,255,.18); border-radius:100px; font-size:clamp(11px,.85vw,13px); letter-spacing:.02em; color:rgba(255,255,255,.8)">Substance Painter</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Contact CTA" style="padding:clamp(90px,14vw,200px) clamp(18px,5vw,90px) clamp(70px,11vw,160px); border-top:1px solid rgba(255,255,255,.08); text-align:center">
+    <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">have a project in mind?</span>
+    <h2 style="margin:clamp(18px,2.4vw,34px) 0 0; font-size:clamp(38px,7.4vw,130px); font-weight:600; letter-spacing:-.05em; line-height:1; color:#fff">lets talk!</h2>
+    <div style="display:flex; justify-content:center; gap:clamp(12px,1.6vw,20px); flex-wrap:wrap; margin-top:clamp(28px,4vw,52px)">
+      <a href="Portfolio.dc.html#contact" style="padding:15px 34px; border-radius:100px; background:#ff9f1c; color:#000; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; transition:opacity .3s; white-space:nowrap" style-hover="opacity:.82; color:#000">get in touch</a>
+      <a href="Portfolio.dc.html#work" style="padding:15px 34px; border-radius:100px; border:1px solid rgba(255,255,255,.28); color:rgba(255,255,255,.85); font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; transition:border-color .3s, color .3s; white-space:nowrap" style-hover="border-color:#fff; color:#fff">back to work</a>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!(this.props.scrollReveal ?? true) || reduce) return;
+    const items = Array.from(document.querySelectorAll('[data-reveal]'));
+    items.forEach(el => {
+      el.style.transition = 'opacity .9s cubic-bezier(.22,.61,.36,1), transform 1s cubic-bezier(.22,.61,.36,1)';
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+    });
+    const show = el => {
+      if (el.dataset.revealed) return;
+      el.dataset.revealed = '1';
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      const done = () => { el.style.transition = ''; el.removeEventListener('transitionend', done); };
+      el.addEventListener('transitionend', done);
+    };
+    const heal = () => items.forEach(el => {
+      if (el.dataset.revealed) return;
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.94) show(el);
+    });
+    if ('IntersectionObserver' in window) {
+      this._io = new IntersectionObserver(en => {
+        en.forEach(e => { if (e.isIntersecting) { show(e.target); this._io.unobserve(e.target); } });
+      }, { rootMargin: '200px 0px -8% 0px' });
+      items.forEach(el => this._io.observe(el));
+      let raf = 0;
+      this._heal = () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; heal(); }); };
+      window.addEventListener('scroll', this._heal, { passive: true });
+      window.addEventListener('resize', this._heal, { passive: true });
+      heal();
+      setTimeout(heal, 400);
+    } else items.forEach(show);
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._heal) {
+      window.removeEventListener('scroll', this._heal);
+      window.removeEventListener('resize', this._heal);
+    }
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

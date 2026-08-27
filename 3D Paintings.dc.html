@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#000; }
+  body { font-family: Archivo, "Helvetica Neue", Helvetica, sans-serif; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:#ff9f1c; text-decoration:none; }
+  a:hover { color:#fff; }
+  ::selection { background:#ff9f1c; color:#000; }
+  html { scroll-behavior:smooth; }
+</style>
+</helmet>
+<div style="background:#000; color:#fff; position:relative; overflow:hidden">
+
+  <header style="position:fixed; top:0; left:0; right:0; z-index:60; display:flex; align-items:center; justify-content:space-between; padding:clamp(16px,2vw,26px) clamp(18px,3.2vw,46px); gap:16px; backdrop-filter:blur(18px); background:rgba(0,0,0,.55); border-bottom:1px solid rgba(255,255,255,.07)">
+    <nav style="display:flex; gap:clamp(16px,2.6vw,38px); align-items:center; flex-wrap:wrap">
+      <a href="Portfolio.dc.html#home" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">home</a>
+      <a href="Portfolio.dc.html#work" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">my work</a>
+      <a href="Portfolio.dc.html#about" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">about</a>
+      <a href="Portfolio.dc.html#contact" style="font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.65); white-space:nowrap" style-hover="color:#fff">contact</a>
+    </nav>
+    <div style="display:flex; gap:22px; align-items:center">
+      <a href="https://instagram.com" target="_blank" rel="noreferrer" style="display:grid; place-items:center; width:17px; height:9px; opacity:.8; transition:opacity .3s ease" style-hover="opacity:1">
+        <img src="assets/icone_instagram.png" alt="Instagram" style="width:100%; height:100%; object-fit:contain; display:block">
+      </a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="position:relative; height:100vh; min-height:620px; overflow:hidden">
+    <img data-heroparallax="1" src="assets/paintings/pods-01.jpg" alt="Hand-painted 3D pod" fetchpriority="high" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:translate3d(0,0,0) scale(1.1); will-change:transform">
+    <div style="position:absolute; inset:0; background:radial-gradient(ellipse 70% 55% at 50% 48%, rgba(0,0,0,.72) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.3) 80%, transparent 100%), linear-gradient(to bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,.35) 32%, rgba(0,0,0,.6) 70%, #000 100%)"></div>
+
+    <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 clamp(18px,5vw,90px); gap:clamp(14px,1.6vw,22px)">
+      <span style="font-size:clamp(9px,.78vw,12px); font-weight:400; letter-spacing:.24em; color:rgba(255,255,255,.78)">Created for RTFKT &amp; Nifty Island · 2023 – 2025</span>
+      <h1 style="margin:0; font-size:clamp(40px,7.4vw,132px); font-weight:600; letter-spacing:-.05em; line-height:.94; color:#fff">3D Hand Painting</h1>
+      <p style="margin:0; font-size:clamp(16px,2.1vw,38px); font-weight:300; letter-spacing:-.02em; color:rgba(255,255,255,.88)">Textures</p>
+      <p style="margin:clamp(10px,1.4vw,20px) 0 0; max-width:52ch; font-size:clamp(13px,1vw,16px); font-weight:400; line-height:1.7; color:rgba(255,255,255,.72); text-wrap:pretty">Four sets of assets textured entirely by hand in Substance Painter — collectible pods, game avatars and environments, a stylized character and a set of creatures.</p>
+    </div>
+  </section>
+
+  <nav data-chapters="1" style="position:sticky; top:clamp(48px,5.4vw,66px); z-index:40; display:flex; justify-content:center; gap:clamp(12px,2vw,30px); flex-wrap:wrap; padding:16px clamp(18px,5vw,90px); background:rgba(0,0,0,.6); backdrop-filter:blur(18px); border-bottom:1px solid rgba(255,255,255,.07)">
+    <a href="#pods" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">pods</a>
+    <a href="#avatars" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">avatars</a>
+    <a href="#environments" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">environments</a>
+    <a href="#character" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">character</a>
+    <a href="#fish" data-chip="1" style="font-size:10px; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.55); white-space:nowrap" style-hover="color:#fff">fish set</a>
+  </nav>
+
+  <section data-screen-label="Discipline" style="padding:clamp(90px,14vw,220px) clamp(18px,5vw,90px)">
+    <div data-reveal="1" style="display:flex; justify-content:center; gap:clamp(28px,4.4vw,72px); flex-wrap:wrap; font-size:clamp(11px,.95vw,15px); font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.72)">
+      <span>3D Painting</span>
+      <span>Texturing</span>
+      <span>Look Development</span>
+    </div>
+    <p data-reveal="1" style="margin:clamp(56px,9vw,140px) auto 0; max-width:22ch; text-align:center; font-size:clamp(28px,4.6vw,76px); font-weight:500; letter-spacing:-.045em; line-height:1.08; color:#fff; text-wrap:balance">Every surface painted by hand.</p>
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,5vw,90px); align-items:start; width:min(100%,1180px); margin:clamp(46px,7vw,110px) auto 0">
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">This page gathers four texturing projects made across different clients and formats. What connects them is the method: no scanned materials, no procedural shortcuts as a finish. Every color, wear mark and highlight was painted directly on the model in Substance Painter.</p>
+        <p style="margin:0">Hand painting is what allows a stylized asset to hold a defined visual language. The texture carries the drawing, not just the surface information.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:clamp(14px,1.6vw,22px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">
+        <p style="margin:0">The projects range from collectible pieces for RTFKT to avatars and environment kits for the game Nifty Island, plus a stylized character and a set of creatures.</p>
+        <p style="margin:0">Each set had its own constraints — real-time budgets, modular reuse, or a single hero render — and the painting approach was adjusted to each one.</p>
+        <p style="margin:0"><span style="color:rgba(255,255,255,.42)">Software</span> — Substance Painter, Photoshop</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pods" data-screen-label="Pods" style="content-visibility:auto; contain-intrinsic-size:auto 1400px; padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:clamp(18px,3vw,48px); flex-wrap:wrap; width:min(100%,1700px); margin:0 auto; padding:0 clamp(18px,5vw,90px)">
+      <h2 data-reveal="1" style="margin:0; font-size:clamp(40px,8vw,150px); font-weight:600; letter-spacing:-.055em; line-height:.9; color:#fff">Pods</h2>
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">rtfkt</span>
+    </div>
+    <p data-reveal="1" style="margin:clamp(24px,3vw,44px) auto 0; max-width:62ch; padding:0 clamp(18px,5vw,90px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">Collectible pods textured as painted objects: graffiti, spray marks, illustrated panels and worn edges applied over a hard-surface model. The paint carries the character; the geometry stays clean.</p>
+    <div style="width:min(100%,1700px); margin:clamp(46px,7vw,100px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <img src="assets/paintings/pods-01.jpg" alt="Hand-painted pod" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(14px,1.8vw,28px); width:min(100%,1700px); margin:clamp(14px,1.8vw,28px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <img src="assets/paintings/pods-02.jpg" alt="Hand-painted pod" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/pods-03.jpg" alt="Hand-painted pod" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/pods-04.jpg" alt="Hand-painted pod" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/pods-05.jpg" alt="Hand-painted pod" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/pods-06.jpg" alt="Hand-painted pod" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(14px,1.8vw,28px); width:min(100%,1700px); margin:clamp(14px,1.8vw,28px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <video data-lazyvid="1" src="assets/paintings/pods-turntable-b.mp4" muted="" loop="" playsinline="" preload="none" aria-label="Pod turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+      <video data-lazyvid="1" src="assets/paintings/pods-turntable-a.mp4" muted="" loop="" playsinline="" preload="none" aria-label="Pod turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+    </div>
+    <p style="margin:14px auto 0; width:min(100%,1700px); padding:0 clamp(18px,5vw,90px); font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">pods — texture painting and turntables</p>
+  </section>
+
+  <section id="avatars" data-screen-label="Avatars" style="content-visibility:auto; contain-intrinsic-size:auto 1200px; padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:clamp(18px,3vw,48px); flex-wrap:wrap; width:min(100%,1700px); margin:0 auto; padding:0 clamp(18px,5vw,90px)">
+      <h2 data-reveal="1" style="margin:0; max-width:14ch; font-size:clamp(40px,8vw,150px); font-weight:600; letter-spacing:-.055em; line-height:.9; color:#fff">Avatars</h2>
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">nifty island</span>
+    </div>
+    <p data-reveal="1" style="margin:clamp(24px,3vw,44px) auto 0; max-width:62ch; padding:0 clamp(18px,5vw,90px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">A series of playable characters textured for the game. Each one had to read clearly at gameplay distance and hold the identity of its collection, working inside a real-time texture budget.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(12px,1.5vw,24px); width:min(100%,1700px); margin:clamp(46px,7vw,100px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <video data-lazyvid="1" src="assets/paintings/nifty-shiba.mp4" muted="" loop="" playsinline="" preload="none" aria-label="Character turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+      <video data-lazyvid="1" src="assets/paintings/nifty-wolfdao.mp4" muted="" loop="" playsinline="" preload="none" aria-label="Character turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+      <video data-lazyvid="1" src="assets/paintings/nifty-metamask.mp4" muted="" loop="" playsinline="" preload="none" aria-label="Character turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+      <video data-lazyvid="1" src="assets/paintings/nifty-sassal.mp4" muted="" loop="" playsinline="" preload="none" aria-label="Character turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+      
+    </div>
+    <p style="margin:14px auto 0; width:min(100%,1700px); padding:0 clamp(18px,5vw,90px); font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">nifty island — character texturing</p>
+  </section>
+
+  <section id="environments" data-screen-label="Environments" style="content-visibility:auto; contain-intrinsic-size:auto 2000px; padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:clamp(18px,3vw,48px); flex-wrap:wrap; width:min(100%,1700px); margin:0 auto; padding:0 clamp(18px,5vw,90px)">
+      <h2 data-reveal="1" style="margin:0; max-width:14ch; font-size:clamp(40px,8vw,150px); font-weight:600; letter-spacing:-.055em; line-height:.9; color:#fff">Houses &amp; props</h2>
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">nifty island</span>
+    </div>
+    <p data-reveal="1" style="margin:clamp(24px,3vw,44px) auto 0; max-width:62ch; padding:0 clamp(18px,5vw,90px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">Buildings, modular kits, furniture and props for the environments. Painted as families rather than single objects: the wood, fabric and paint had to stay consistent across dozens of pieces so players could combine them freely.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(12px,1.5vw,24px); width:min(100%,1700px); margin:clamp(46px,7vw,100px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <video data-lazyvid="1" src="assets/paintings/nifty-bayc.mp4" muted="" loop="" playsinline="" preload="none" aria-label="House turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+      <video data-lazyvid="1" src="assets/paintings/nifty-moonbirds.mp4" muted="" loop="" playsinline="" preload="none" aria-label="House turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+      <video data-lazyvid="1" src="assets/paintings/nifty-forgottenrunes.mp4" muted="" loop="" playsinline="" preload="none" aria-label="House turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+      <video data-lazyvid="1" src="assets/paintings/nifty-cyberkong.mp4" muted="" loop="" playsinline="" preload="none" aria-label="House turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+      <video data-lazyvid="1" src="assets/paintings/nifty-sappyseals.mp4" muted="" loop="" playsinline="" preload="none" aria-label="House turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+    </div>
+    <p style="margin:14px auto 0; width:min(100%,1700px); padding:0 clamp(18px,5vw,90px); font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">houses — texture painting and turntables</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(14px,1.8vw,28px); width:min(100%,1700px); margin:clamp(46px,7vw,100px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <img src="assets/paintings/env-01.jpg" alt="Hand-painted furniture set" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px; grid-column:1/-1">
+      <img src="assets/paintings/env-02.jpg" alt="Hand-painted prop" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/env-04.jpg" alt="Hand-painted prop" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/env-05.jpg" alt="Hand-painted prop" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/env-06.jpg" alt="Modular flooring kit" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+    </div>
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(28px,4vw,64px); align-items:center; width:min(100%,1500px); margin:clamp(46px,7vw,100px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <img src="assets/paintings/env-03.jpg" alt="Untextured modular kit" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <p style="margin:0; font-size:clamp(15px,1.35vw,22px); font-weight:400; line-height:1.6; letter-spacing:-.01em; color:#fff; text-wrap:pretty">The same kit before painting. Everything that reads as material in the final asset — grain, joints, dirt, colored accents — was added in the texture.</p>
+    </div>
+    <p style="margin:14px auto 0; width:min(100%,1700px); padding:0 clamp(18px,5vw,90px); font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">props and modular kits — environment assets</p>
+  </section>
+
+  <section id="character" data-screen-label="Character" style="content-visibility:auto; contain-intrinsic-size:auto 1200px; padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:clamp(18px,3vw,48px); flex-wrap:wrap; width:min(100%,1700px); margin:0 auto; padding:0 clamp(18px,5vw,90px)">
+      <h2 data-reveal="1" style="margin:0; max-width:14ch; font-size:clamp(40px,8vw,150px); font-weight:600; letter-spacing:-.055em; line-height:.9; color:#fff">Stylized character</h2>
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">art test</span>
+    </div>
+    <p data-reveal="1" style="margin:clamp(24px,3vw,44px) auto 0; max-width:62ch; padding:0 clamp(18px,5vw,90px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">A single character taken further as a painting exercise: skin, hair, fabric and leather built up in layers, with the light and volume painted into the diffuse rather than left to the shader.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(14px,1.8vw,28px); width:min(100%,1500px); margin:clamp(46px,7vw,100px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <video data-lazyvid="1" src="assets/paintings/char-render.mp4" muted="" loop="" playsinline="" preload="none" aria-label="Character render" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+      <video data-lazyvid="1" src="assets/paintings/char-turntable-a.mp4" muted="" loop="" playsinline="" preload="none" aria-label="Character turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+      <video data-lazyvid="1" src="assets/paintings/char-turntable-b.mp4" muted="" loop="" playsinline="" preload="none" aria-label="Character turntable" style="width:100%; height:auto; display:block; border-radius:4px; background:#050505"></video>
+    </div>
+    <p style="margin:14px auto 0; width:min(100%,1500px); padding:0 clamp(18px,5vw,90px); font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">stylized character — render and turntables</p>
+  </section>
+
+  <section id="fish" data-screen-label="Fish set" style="content-visibility:auto; contain-intrinsic-size:auto 1600px; padding:clamp(70px,11vw,170px) 0; border-top:1px solid rgba(255,255,255,.08)">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:clamp(18px,3vw,48px); flex-wrap:wrap; width:min(100%,1700px); margin:0 auto; padding:0 clamp(18px,5vw,90px)">
+      <h2 data-reveal="1" style="margin:0; max-width:14ch; font-size:clamp(40px,8vw,150px); font-weight:600; letter-spacing:-.055em; line-height:.9; color:#fff">Fish set</h2>
+      <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">creature painting</span>
+    </div>
+    <p data-reveal="1" style="margin:clamp(24px,3vw,44px) auto 0; max-width:62ch; padding:0 clamp(18px,5vw,90px); font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">A family of creatures painted with a shared palette and a loose, wet-brush treatment. Each one is distinct, but the color logic and the way the paint bleeds across the body keeps the set reading as one species.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:clamp(12px,1.5vw,24px); width:min(100%,1700px); margin:clamp(46px,7vw,100px) auto 0; padding:0 clamp(18px,5vw,90px)">
+      <img src="assets/paintings/fish-01.jpg" alt="Hand-painted creature" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/fish-02.jpg" alt="Hand-painted creature" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/fish-03.jpg" alt="Hand-painted creature" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/fish-04.jpg" alt="Hand-painted creature" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/fish-05.jpg" alt="Hand-painted creature" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/fish-06.jpg" alt="Hand-painted creature" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/fish-07.jpg" alt="Hand-painted creature" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+      <img src="assets/paintings/fish-08.jpg" alt="Hand-painted creature" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+    </div>
+    <p style="margin:14px auto 0; width:min(100%,1700px); padding:0 clamp(18px,5vw,90px); font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">fish set — creature texture painting</p>
+  </section>
+
+  <section data-screen-label="Process" style="content-visibility:auto; contain-intrinsic-size:auto 900px; padding:clamp(70px,11vw,170px) clamp(18px,5vw,90px); border-top:1px solid rgba(255,255,255,.08)">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(34px,6vw,100px); align-items:center; width:min(100%,1500px); margin:0 auto">
+      <div>
+        <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">inside the file</span>
+        <h3 data-reveal="1" style="margin:clamp(16px,2vw,28px) 0 0; max-width:16ch; font-size:clamp(30px,4.4vw,72px); font-weight:500; letter-spacing:-.05em; line-height:1.04; color:#fff; text-wrap:balance">Painted in layers, on the model.</h3>
+        <p data-reveal="1" style="margin:clamp(22px,3vw,40px) 0 0; max-width:46ch; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.62); text-wrap:pretty">Every asset is built as a stack of hand-painted layers and masks in Substance Painter, checked against the UV layout as the paint goes down. Working this way keeps the result editable and keeps the texture consistent when the same material has to appear across an entire set.</p>
+      </div>
+      <div data-reveal="1">
+        <img src="assets/paintings/substance-ui.jpg" alt="Substance Painter workspace" loading="lazy" decoding="async" style="width:100%; height:auto; display:block; border-radius:4px">
+        <p style="margin:14px 0 0; font-size:9px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.34)">substance painter — layer stack and uv layout</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Closing" style="padding:clamp(90px,14vw,220px) clamp(18px,5vw,90px); border-top:1px solid rgba(255,255,255,.08); text-align:center">
+    <span style="font-size:10px; font-weight:600; letter-spacing:.42em; text-transform:uppercase; color:#ff9f1c">one creative practice</span>
+    <p data-reveal="1" style="margin:clamp(18px,2.4vw,34px) auto 0; max-width:24ch; font-size:clamp(26px,4.2vw,68px); font-weight:500; letter-spacing:-.045em; line-height:1.1; color:#fff; text-wrap:balance">Texturing as a drawing discipline.</p>
+    <p data-reveal="1" style="margin:clamp(28px,4vw,56px) auto 0; max-width:66ch; font-size:clamp(13px,1vw,16px); line-height:1.8; color:rgba(255,255,255,.6); text-wrap:pretty">Hand painting textures is where the graphic design side of my practice meets 3D. The decisions are the same ones a drawing asks for — palette, contrast, where the eye should land — applied to a surface that has to hold up from every angle and inside a real engine.</p>
+  </section>
+
+  <section data-screen-label="Contact CTA" style="padding:0 clamp(18px,5vw,90px) clamp(70px,11vw,160px); text-align:center">
+    <h2 style="margin:0; font-size:clamp(38px,7.4vw,130px); font-weight:600; letter-spacing:-.05em; line-height:1; color:#fff">lets talk!</h2>
+    <div style="display:flex; justify-content:center; gap:clamp(12px,1.6vw,20px); flex-wrap:wrap; margin-top:clamp(28px,4vw,52px)">
+      <a href="Portfolio.dc.html#contact" style="padding:15px 34px; border-radius:100px; background:#ff9f1c; color:#000; font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; transition:opacity .3s; white-space:nowrap" style-hover="opacity:.82; color:#000">get in touch</a>
+      <a href="Portfolio.dc.html#work" style="padding:15px 34px; border-radius:100px; border:1px solid rgba(255,255,255,.28); color:rgba(255,255,255,.85); font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; transition:border-color .3s, color .3s; white-space:nowrap" style-hover="border-color:#fff; color:#fff">back to work</a>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;autoplayVideos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Media&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if ((this.props.scrollReveal ?? true) && !reduce) {
+      const items = Array.from(document.querySelectorAll('[data-reveal]'))
+        .filter(el => !el.querySelector('img, video, iframe'));
+      items.forEach(el => {
+        el.style.transition = 'opacity .9s cubic-bezier(.22,.61,.36,1), transform 1s cubic-bezier(.22,.61,.36,1)';
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+      });
+      const show = el => {
+        if (el.dataset.revealed) return;
+        el.dataset.revealed = '1';
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+        const done = () => { el.style.transition = ''; el.removeEventListener('transitionend', done); };
+        el.addEventListener('transitionend', done);
+      };
+      const heal = () => items.forEach(el => {
+        if (!el.dataset.revealed && el.getBoundingClientRect().top < window.innerHeight * 0.94) show(el);
+      });
+      this._heal = heal;
+      if ('IntersectionObserver' in window) {
+        this._io = new IntersectionObserver(en => {
+          en.forEach(e => { if (e.isIntersecting) { show(e.target); this._io.unobserve(e.target); } });
+        }, { rootMargin: '200px 0px -8% 0px' });
+        items.forEach(el => this._io.observe(el));
+        heal();
+        setTimeout(heal, 400);
+      } else items.forEach(show);
+    }
+
+    const vids = Array.from(document.querySelectorAll('[data-lazyvid]'));
+    const autoplay = (this.props.autoplayVideos ?? true) && !reduce;
+    vids.forEach(v => { v.muted = true; v.loop = true; v.playsInline = true; v.disablePictureInPicture = true; });
+    if ('IntersectionObserver' in window) {
+      this._pio = new IntersectionObserver(en => {
+        en.forEach(e => {
+          if (!e.isIntersecting) return;
+          if (e.target.preload !== 'auto') { e.target.preload = 'auto'; e.target.load(); }
+          this._pio.unobserve(e.target);
+        });
+      }, { rootMargin: '40% 0px' });
+      vids.forEach(v => this._pio.observe(v));
+
+      this._vio = new IntersectionObserver(en => {
+        en.forEach(e => {
+          const v = e.target;
+          if (e.isIntersecting && autoplay) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+          else if (!v.paused) v.pause();
+        });
+      }, { threshold: 0.15 });
+      vids.forEach(v => this._vio.observe(v));
+    }
+    this._vis = () => { if (document.hidden) vids.forEach(v => v.pause()); };
+    document.addEventListener('visibilitychange', this._vis);
+
+    const hero = document.querySelector('[data-heroparallax]');
+    const chips = Array.from(document.querySelectorAll('[data-chip]'));
+    const targets = chips.map(a => document.querySelector(a.getAttribute('href')));
+    let raf = 0;
+    const frame = () => {
+      raf = 0;
+      if (hero && !reduce) {
+        const r = hero.parentElement.getBoundingClientRect();
+        if (r.bottom > -200 && r.top < window.innerHeight + 200) {
+          const p = Math.max(-1, Math.min(1, (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight));
+          hero.style.transform = 'translate3d(0,' + (-p * r.height * 0.07).toFixed(2) + 'px,0) scale(1.1)';
+        }
+      }
+      if (this._heal) this._heal();
+      let active = -1;
+      targets.forEach((el, i) => { if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.4) active = i; });
+      chips.forEach((a, i) => { a.style.color = i === active ? '#fff' : 'rgba(255,255,255,.55)'; });
+    };
+    this._scroll = () => { if (!raf) raf = requestAnimationFrame(frame); };
+    window.addEventListener('scroll', this._scroll, { passive: true });
+    window.addEventListener('resize', this._scroll, { passive: true });
+    frame();
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._vio) this._vio.disconnect();
+    if (this._pio) this._pio.disconnect();
+    document.removeEventListener('visibilitychange', this._vis);
+    window.removeEventListener('scroll', this._scroll);
+    window.removeEventListener('resize', this._scroll);
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
