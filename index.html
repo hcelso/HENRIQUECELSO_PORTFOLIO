@@ -232,13 +232,13 @@ Textures</h3>
       <h2 data-ink="1" style="margin:0; font-size:clamp(44px,9vw,150px); font-weight:700; letter-spacing:-.04em; line-height:1; color:#fff">lets talk!</h2>
     </div>
 
-    <form onSubmit="{{ onSubmit }}" data-reveal="1" style="position:relative; z-index:2; width:min(560px,86vw); margin:clamp(44px,7vh,84px) auto 0; display:flex; flex-direction:column; gap:14px">
+    <form id="contato" action="https://api.web3forms.com/submit" method="POST" data-reveal="1" style="position:relative; z-index:2; width:min(560px,86vw); margin:clamp(44px,7vh,84px) auto 0; display:flex; flex-direction:column; gap:14px"><input type="hidden" name="access_key" value="0bb200b4-1151-4b24-b095-9898aba62bc4"><input type="hidden" name="subject" value="Novo contato pelo site"><input type="hidden" name="from_name" value="henriquecelso.com"><input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
       <input data-field="1" name="name" placeholder="Name:" style="width:100%; padding:18px 20px; border:1px solid rgba(255,255,255,.35); border-radius:6px; background:rgba(255,255,255,.02); color:#fff; font-size:13px; letter-spacing:.06em; outline:none" style-focus="border-color:var(--accent,#ff9f1c)">
       <input data-field="1" name="phone" placeholder="Phone:" style="width:100%; padding:18px 20px; border:1px solid rgba(255,255,255,.35); border-radius:6px; background:rgba(255,255,255,.02); color:#fff; font-size:13px; letter-spacing:.06em; outline:none" style-focus="border-color:var(--accent,#ff9f1c)">
       <input data-field="1" name="email" type="email" placeholder="E-Mail:" style="width:100%; padding:18px 20px; border:1px solid rgba(255,255,255,.35); border-radius:6px; background:rgba(255,255,255,.02); color:#fff; font-size:13px; letter-spacing:.06em; outline:none" style-focus="border-color:var(--accent,#ff9f1c)">
       <textarea data-field="1" name="message" placeholder="Message:" rows="5" style="width:100%; padding:18px 20px; border:1px solid rgba(255,255,255,.35); border-radius:6px; background:rgba(255,255,255,.02); color:#fff; font-size:13px; letter-spacing:.06em; outline:none; resize:vertical" style-focus="border-color:var(--accent,#ff9f1c)"></textarea>
       <div style="display:flex; justify-content:flex-end; align-items:center; gap:18px; margin-top:8px">
-        <span data-dim="1" style="font-size:9px; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.5)">{{ formNote }}</span>
+        <span id="contato-status" data-dim="1" style="font-size:9px; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.5); transition:color .3s"></span>
         <button type="submit" style="padding:14px 30px; border:1px solid var(--accent,#ff9f1c); border-radius:5px; background:transparent; color:var(--accent,#ff9f1c); font-size:9px; font-weight:600; letter-spacing:.34em; text-transform:uppercase" style-hover="background:var(--accent,#ff9f1c); color:#000">Submit</button>
       </div>
     </form>
@@ -956,6 +956,43 @@ class Component extends DCLogic {
   }
 }
 
+</script>
+
+<script>
+(function(){
+  function el(id){ return document.getElementById(id); }
+  function diz(msg, cor){ var a = el("contato-status"); if(a){ a.textContent = msg; a.style.color = cor; } }
+
+  document.addEventListener("submit", function(e){
+    var f = e.target;
+    if (!f || f.id !== "contato") return;
+    e.preventDefault();
+
+    var chave = f.querySelector('[name="access_key"]');
+    if (!chave || chave.value.indexOf("COLE_SUA") === 0){
+      diz("formulario ainda nao configurado", "#ff9f1c");
+      return;
+    }
+
+    var botao = f.querySelector('button[type="submit"]');
+    var texto = botao ? botao.textContent : "";
+    if (botao){ botao.disabled = true; botao.textContent = "enviando..."; }
+    diz("", "rgba(255,255,255,.5)");
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(f)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (d && d.success){ f.reset(); diz("mensagem enviada \u2014 obrigado!", "#ff9f1c"); }
+      else { diz("nao consegui enviar. tente de novo", "#ff6b6b"); }
+    })
+    .catch(function(){ diz("sem conexao. tente de novo", "#ff6b6b"); })
+    .finally(function(){ if (botao){ botao.disabled = false; botao.textContent = texto; } });
+  }, true);
+})();
 </script>
 </body>
 </html>
