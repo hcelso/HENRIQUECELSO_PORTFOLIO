@@ -1,0 +1,37 @@
+AJUSTES — nova ordem dos cards + imagens maiores em 3D Paintings
+
+Descompacte estes 3 arquivos POR CIMA da pasta do site,
+substituindo os que ja existem. Depois: GitHub Desktop ->
+Fetch origin -> Commit -> Push.
+
+O QUE MUDOU
+
+1. index.html
+   Nova ordem dos cards de portfolio:
+   Nicktoons / Authentic / 3D Paintings / Fendaara /
+   The Warning / The Signal.
+   Os pontinhos da lateral e o clique em cada card seguem a
+   nova ordem. A primeira imagem agora carrega com prioridade
+   (era a da Authentic).
+
+2. 3D Paintings.dc.html
+   Galerias com menos colunas e itens maiores:
+   - pods:        5 -> 3 colunas
+   - avatars:     4 -> 2 colunas
+   - casas:       5 -> 3 colunas
+   - environment: 4 -> 2 colunas
+   - fish:        5 -> 3 colunas
+   No notebook (1440px) as imagens passaram de ~280px para
+   ~420px de largura. No celular continua 1 coluna, sem
+   rolagem lateral.
+
+3. Portfolio Standalone.dc.html
+   Mesma reordenacao, so por consistencia. Este arquivo nao
+   e usado por nenhuma pagina do site -- se quiser, pode
+   apagar sem medo.
+
+TESTADO
+Naveguei as 6 posicoes do slider num navegador real: todos os
+cards aparecem na ordem certa e o clique leva a pagina certa.
+Auditoria de links: 58 links internos, 219 arquivos, 0
+quebrados. Sem rolagem horizontal em 390 / 1280 / 1440 / 1920.
