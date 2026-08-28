@@ -1,0 +1,16 @@
+# pastas de trabalho do Claude Design — não vão para o site
+uploads/
+figma/
+refs/
+.thumbnail
+CLAUDE.md
+
+# sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# fontes de vídeo pesadas (mantenha fora do repositório)
+*.mov
+*.prproj
+*.aep
